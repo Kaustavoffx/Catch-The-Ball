@@ -2,11 +2,12 @@ const basket = document.getElementById("basket");
 const ball = document.getElementById("ball")
 const scoreText = document.getElementById("score");
 const startBtn = document.getElementById("startBtn");
+const livesText = document.getElementById("lives");
 
 let basketX=150;
 let ballX = Math.random() = 370;
 let ballY = 0;
-
+let lives = 3;
 let score = 0;
 
 document.addEventListener("mousemove", moveBasket);
@@ -40,7 +41,16 @@ if(ballY > 550){
         score++;
         scoreText.innerText = score;
 
+    }else{
+        lives --;
+        livesText.innerText = lives;
+
+        if(lives === 0){
+            clearInterval(gameInterval);
+            alert("Game Over! Final Score:" + score);
+            startBtn.siabled =false;
         }
+    }
 
     resetBall()
     }
@@ -58,5 +68,5 @@ function startgame(){
     gameInterval = setInterval(updateBall, 20);
 
     startBtn.disabled = true;
-        
+
 }
