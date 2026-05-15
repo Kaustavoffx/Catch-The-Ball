@@ -65,6 +65,16 @@ let gameInterval;
 startBtn.addEventListener("click", startGame);
 
 function startgame(){
+    score=0;
+    lives=3;
+
+    scoreText.innerText = score;
+    livesText.innerText = lives;
+
+    resetball();
+
+    clearInterval(gameInterval);
+
     gameInterval = setInterval(updateBall, 20);
 
     startBtn.disabled = true;
