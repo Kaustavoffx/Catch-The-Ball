@@ -4,6 +4,7 @@ const scoreText = document.getElementById("score");
 const startBtn = document.getElementById("startBtn");
 const livesText = document.getElementById("lives");
 const pauseBtn = document.getElementById("pauseBtn");
+const highScoreText = document.getElementById("highScore");
 
 let paused = false;
 let basketX = 150;
@@ -14,6 +15,17 @@ let score = 0;
 let speed = 4;
 let gameInterval;
 let gameRunning = false;
+let highScore = localStorage.getItem("highScore") || 0;
+
+
+if (score> highScore){
+
+    highScore = score;
+
+    localStorage.setItem("highScore",highScore);
+    
+    highScoreText.innerText = highScore ;
+}
 
 document.addEventListener("mousemove", moveBasket);
 

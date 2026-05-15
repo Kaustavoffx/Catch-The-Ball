@@ -79,3 +79,8 @@ h1{
         width:80px;
     }
 }
+
+#highScoreBoard{
+    font-size:24pc;
+    margin-top:10px;
+}
