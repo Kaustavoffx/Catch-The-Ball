@@ -81,7 +81,7 @@ h1{
 }
 
 #highScoreBoard{
-    font-size:24pc;
+    font-size:24px;
     margin-top:10px;
 }
 
@@ -107,7 +107,7 @@ h1{
 
 #restartBtn{
     padding: 10px 20px;
-    margin-top:15 px;
+    margin-top:15px;
     border:none;
     background:#22c55e;
     cursor:pointer;
@@ -118,4 +118,13 @@ h1{
     font-size: 18px ;
     margin-top: 10px;
     color:#d1d5db;
+}
+
+button{
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+    opacity:0.9;
 }
