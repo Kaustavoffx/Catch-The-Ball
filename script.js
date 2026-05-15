@@ -4,28 +4,32 @@ const scoreText = document.getElementById("score");
 const startBtn = document.getElementById("startBtn");
 const livesText = document.getElementById("lives");
 const pauseBtn = document.getElementById("pauseBtn");
+
 const highScoreText = document.getElementById("highScore");
 
+const gameOverModal = document.getElementById("gameOverModal");
+const finalScoreText = document.getElementById("finalScoreText");
+const restartBtn = document.getElementById("restartBtn");
+
 let paused = false;
+
 let basketX = 150;
+
 let ballX = Math.random() * 340;
 let ballY = 0;
+
 let lives = 3;
 let score = 0;
+
 let speed = 4;
+
 let gameInterval;
+
 let gameRunning = false;
+
 let highScore = localStorage.getItem("highScore") || 0;
 
-
-if (score> highScore){
-
-    highScore = score;
-
-    localStorage.setItem("highScore",highScore);
-    
-    highScoreText.innerText = highScore ;
-}
+highScoreText.innerText = highScore;
 
 document.addEventListener("mousemove", moveBasket);
 
@@ -70,6 +74,15 @@ function updateBall(){
 
             scoreText.innerText = score;
 
+            if(score > highScore){
+
+                highScore = score;
+
+                localStorage.setItem("highScore", highScore);
+
+                highScoreText.innerText = highScore;
+            }
+
             if(score % 5 === 0){
                 speed += 1;
             }
@@ -90,7 +103,9 @@ function updateBall(){
 
                 livesText.innerText = lives;
 
-                alert("Game Over! Final Score: " + score);
+                finalScoreText.innerText = "Final Score: " + score;
+
+                gameOverModal.style.display = "flex";
 
                 startBtn.disabled = false;
 
@@ -129,6 +144,8 @@ function startGame(){
 
     livesText.innerText = lives;
 
+    gameOverModal.style.display = "none";
+
     resetBall();
 
     clearInterval(gameInterval);
@@ -139,6 +156,13 @@ function startGame(){
 }
 
 startBtn.addEventListener("click", startGame);
+
+restartBtn.addEventListener("click", function(){
+
+    gameOverModal.style.display = "none";
+
+    startGame();
+});
 
 document.addEventListener("keydown", function(event){
 
