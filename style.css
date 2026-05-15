@@ -141,3 +141,8 @@ button:hover{
 #startScreen p{
     color:#cbd5e1;
 }
+
+.scorePop{
+    transform:scale(1,2);
+    color:#22c55e
+}

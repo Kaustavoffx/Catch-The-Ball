@@ -105,11 +105,21 @@ function startGame(){
     score = 0;
     lives = 3;
     speed = 4;
+    
     scoreText.innerText = score;
+
     livesText.innerText = lives;
+
     gameOverModal.style.display = "none";
     resetBall();
+
     clearInterval(gameInterval);
+
+    scoreText.classList.add("scorePop");
+    setTimeout(function(){
+        scoreText.classList.remove("scorePop");
+    },200);
+
     gameInterval = setInterval(updateBall, 20);
     startBtn.disabled = true;
     document.getElementById("startScreen").style.display="none";
