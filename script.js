@@ -9,6 +9,7 @@ let ballX = Math.random() = 370;
 let ballY = 0;
 let lives = 3;
 let score = 0;
+let speed = 4;
 
 document.addEventListener("mousemove", moveBasket);
 
@@ -31,7 +32,7 @@ function moveBasket(event){
 }
 
 function updateBall(){
-    ballY += 4;
+    ballY += speed;
 
     ball.style.top = ballY +'px';
     ball.style.left = ballY +'px';
@@ -67,6 +68,7 @@ startBtn.addEventListener("click", startGame);
 function startgame(){
     score=0;
     lives=3;
+    speed = 4;
 
     scoreText.innerText = score;
     livesText.innerText = lives;
@@ -79,4 +81,8 @@ function startgame(){
 
     startBtn.disabled = true;
 
+}
+
+if(score % 5 === 0){
+    speed += 1;
 }
