@@ -33,3 +33,22 @@ Next Goals:
 -Add sound effects
 -create better game balancing
 
+
+##Late Night Session
+
+additional Time:
+3 hours (2 hours done, 3 ongoing)
+
+completed:
+-Added start screen
+-Added timer system
+-Added score animations
+-Improved Ui polish
+-added footer section
+-Improved visual effects
+
+Issues faced:
+-Timer reset bugs
+-animation timing adjustments
+-Layout spacing refinements
+
