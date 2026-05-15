@@ -86,3 +86,25 @@ function startgame(){
 if(score % 5 === 0){
     speed += 1;
 }
+
+document.addEventListener("keydown", function(event){
+
+    if(event.key ==="Arrowleft"){
+        basketX -= 30;
+    }
+
+    if(event.key === "ArrowRight"){
+        basketX +=30;
+    }
+
+    if(basketX <0){
+        basketX = 0
+    }
+
+    if(basketX > 0){
+        basketX = 300
+    }
+
+    basket.style.left = basketX + "px"
+
+});
