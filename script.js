@@ -4,36 +4,25 @@ const scoreText = document.getElementById("score");
 const startBtn = document.getElementById("startBtn");
 const livesText = document.getElementById("lives");
 const pauseBtn = document.getElementById("pauseBtn");
-
 const highScoreText = document.getElementById("highScore");
-
 const gameOverModal = document.getElementById("gameOverModal");
 const finalScoreText = document.getElementById("finalScoreText");
 const restartBtn = document.getElementById("restartBtn");
-
 const timerText = document.getElementById("timer");
 
 let timer = 0;
-
 let timerInterval;
-
 let paused = false;
-
 let basketX = 150;
-
 let ballX = Math.random() * 340;
 let ballY = 0;
-
 let lives = 3;
 let score = 0;
-
 let speed = 4;
-
 let gameInterval;
-
 let gameRunning = false;
-
 let highScore = localStorage.getItem("highScore") || 0;
+
 
 highScoreText.innerText = highScore;
 
@@ -138,7 +127,6 @@ function updateBall(){
 function resetBall(){
 
     ballY = 0;
-
     ballX = Math.random() * 340;
 
     ball.style.top = ballY + "px";
