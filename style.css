@@ -147,3 +147,8 @@ button:hover{
     transform:scale(1,2);
     color:#22c55e
 }
+
+#timerBoard{
+    font-size:24px;
+    margin-top:10px;
+}
