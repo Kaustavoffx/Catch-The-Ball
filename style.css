@@ -68,7 +68,8 @@ h1{
     cursor:pointer;
 }
 
-@media(max-width:500){
+@media(max-width:500px){
+
     #gameArea{
         width:95%;
         height:500px;
