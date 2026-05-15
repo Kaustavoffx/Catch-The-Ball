@@ -6,18 +6,14 @@ const livesText = document.getElementById("lives");
 const pauseBtn = document.getElementById("pauseBtn");
 
 let paused = false;
-
 let basketX = 150;
-
-let ballX = Math.random() * 370;
+let ballX = Math.random() * 340;
 let ballY = 0;
-
 let lives = 3;
 let score = 0;
-
 let speed = 4;
-
 let gameInterval;
+let gameRunning = false;
 
 document.addEventListener("mousemove", moveBasket);
 
@@ -42,14 +38,21 @@ function moveBasket(event){
 
 function updateBall(){
 
+    if(!gameRunning){
+        return;
+    }
+
     ballY += speed;
 
     ball.style.top = ballY + "px";
     ball.style.left = ballX + "px";
 
-    if(ballY > 550){
+    if(ballY > 520){
 
-        if(ballX > basketX && ballX < basketX + 100){
+        if(
+            ballX + 30 > basketX &&
+            ballX < basketX + 100
+        ){
 
             score++;
 
@@ -63,17 +66,17 @@ function updateBall(){
 
             lives--;
 
-            livesText.innerText = lives;
-
-            if(lives === 0){
+            if(lives <= 0){
 
                 lives = 0;
 
-                livesText.innerText = lives;
+                gameRunning = false;
 
                 clearInterval(gameInterval);
 
                 resetBall();
+
+                livesText.innerText = lives;
 
                 alert("Game Over! Final Score: " + score);
 
@@ -81,6 +84,8 @@ function updateBall(){
 
                 return;
             }
+
+            livesText.innerText = lives;
         }
 
         resetBall();
@@ -93,12 +98,14 @@ function resetBall(){
 
     ballX = Math.random() * 340;
 
-    ball.style.top = ballY +"px";
+    ball.style.top = ballY + "px";
 
-    ball.style.left +"px";
+    ball.style.left = ballX + "px";
 }
 
 function startGame(){
+
+    gameRunning = true;
 
     score = 0;
 
