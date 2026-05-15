@@ -113,3 +113,9 @@ h1{
     cursor:pointer;
     border-radius:8px;
 }
+
+#instructions{
+    font-size: 18px ;
+    margin-top: 10px;
+    color:#d1d5db;
+}
