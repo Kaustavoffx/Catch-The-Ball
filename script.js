@@ -112,6 +112,7 @@ function startGame(){
     clearInterval(gameInterval);
     gameInterval = setInterval(updateBall, 20);
     startBtn.disabled = true;
+    document.getElementById("startScreen").style.display="none";
 }
 
 startBtn.addEventListener("click", startGame);

@@ -128,3 +128,16 @@ button:hover{
     transform:scale(1.05);
     opacity:0.9;
 }
+
+#startscreen{
+    margin-top:20px ;
+    padding :20px ;   
+}
+
+#startScreen h2{
+    font-size:32px;
+}
+
+#startScreen p{
+    color:#cbd5e1;
+}
