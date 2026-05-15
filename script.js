@@ -67,11 +67,19 @@ function updateBall(){
 
             if(lives === 0){
 
+                lives = 0;
+
+                livesText.innerText = lives;
+
                 clearInterval(gameInterval);
+
+                resetBall();
 
                 alert("Game Over! Final Score: " + score);
 
                 startBtn.disabled = false;
+
+                return;
             }
         }
 
@@ -83,7 +91,11 @@ function resetBall(){
 
     ballY = 0;
 
-    ballX = Math.random() * 370;
+    ballX = Math.random() * 340;
+
+    ball.style.top = ballY +"px";
+
+    ball.style.left +"px";
 }
 
 function startGame(){
