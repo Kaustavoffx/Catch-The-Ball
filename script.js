@@ -3,7 +3,9 @@ const ball = document.getElementById("ball")
 const scoreText = document.getElementById("score");
 const startBtn = document.getElementById("startBtn");
 const livesText = document.getElementById("lives");
+const pauseBtn = document.getElementById("pauseBtn");
 
+let paused = false;
 let basketX=150;
 let ballX = Math.random() = 370;
 let ballY = 0;
@@ -107,4 +109,17 @@ document.addEventListener("keydown", function(event){
 
     basket.style.left = basketX + "px"
 
+});
+
+pauseBtn.addEventListener("click",function() {
+    if(!paused){
+        clearInterval(gameInterval);
+        paiseBtn.innerText = "Resume";
+        paused = true ;
+
+    }else{
+        gameInterval = setInterval(updateBall, 20);
+        pauseBtn.innerText = "Pause";
+        paused=false;
+    }
 });
