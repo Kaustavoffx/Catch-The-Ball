@@ -44,3 +44,14 @@ h1{
 #scoreBoard{
     font-size: 24px;
 }
+
+#startBtn {
+    padding:12px 24px;
+    border:none;
+    background:orange;
+    color:black;
+    font-size:18px;
+    cursor:pointer;
+    border-radius:8px;
+    font-weight:bold;
+}

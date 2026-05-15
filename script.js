@@ -1,6 +1,7 @@
 const basket = document.getElementById("basket");
 const ball = document.getElementById("ball")
 const scoreText = document.getElementById("score");
+const startBtn = document.getElementById("startBtn");
 
 let basketX=150;
 let ballX = Math.random() = 370;
@@ -50,4 +51,12 @@ function resetball(){
     ballX = Math.random() *370;
 }
 
-setInterval(updateBall, 20);
+let gameInterval;
+startBtn.addEventListener("click", startGame);
+
+function startgame(){
+    gameInterval = setInterval(updateBall, 20);
+
+    startBtn.disabled = true;
+        
+}
