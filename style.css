@@ -67,3 +67,14 @@ h1{
     border-radius:8px;
     cursor:pointer;
 }
+
+@media(max-width:500){
+    #gameArea{
+        width:95%;
+        height:500px;
+    }
+
+    #basket{
+        width:80px;
+    }
+}
