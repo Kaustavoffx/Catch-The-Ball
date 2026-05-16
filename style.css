@@ -176,7 +176,7 @@ footer{
     margin-bottom:15px ;
 }
 
-#settingspanel select{
+#settingsPanel select{
     padding:8px;
     border-radius:6px ;
     margin-top:5px ;
@@ -266,7 +266,7 @@ footer{
 }
 
 #basket:hover{
-    transform:scale(1.05s);
+    transform:scale(1.05);
 }
 
 #comboBoard{

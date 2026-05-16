@@ -94,3 +94,5 @@ Additional Progress:
 -Improved Settings styling
 -Added Visual polish effects
 -Improved scoreboard layout
+
+--------------------------------------------------------------
