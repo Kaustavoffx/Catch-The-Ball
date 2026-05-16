@@ -60,18 +60,29 @@ Date:
 16 May 2026
 
 Time Spent:
-1.30 hrs (ongoing)
+3.5 hrs (ongoing)
 
 works completed:
 - Day 1 Html and css errors are now fixed
+- Added settings panel
+- Added difficulty selector
+- Added light/dark themes
+- Added achievements 
+- Improved pause interface
+- Improved Ui Polish
+
 
 Problems faced
 - Footer issue in Html
+- Theme styling inconsistencies
+- localStorage loading issue
+- pause overlay visibility bug
+- Mobile spacing adjustments
+
 
 Next Goals
-- small features adding
-- Ui refining adding
-- gameplay enhancement 
-- refactoring the codes
-- settings may be added
-- Interaction updates tiny
+- sound settings
+- Better animations
+- Combo system
+- Particle effects
+- Better achievements tracking
