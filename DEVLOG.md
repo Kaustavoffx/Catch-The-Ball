@@ -37,7 +37,7 @@ Next Goals:
 ##Late Night Session
 
 additional Time:
-3 hours (2 hours done, 3 ongoing)
+4 hours (added 1/2 hours for some testing also)
 
 completed:
 -Added start screen
@@ -52,3 +52,6 @@ Issues faced:
 -animation timing adjustments
 -Layout spacing refinements
 
+
+--------------------------------------------------------------
+#Day 2 Dev Log

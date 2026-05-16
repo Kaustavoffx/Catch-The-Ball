@@ -23,7 +23,6 @@ let gameInterval;
 let gameRunning = false;
 let highScore = localStorage.getItem("highScore") || 0;
 
-
 highScoreText.innerText = highScore;
 
 document.addEventListener("mousemove", moveBasket);
