@@ -38,8 +38,8 @@ const comboText =
     document.getElementById("combo");
 
 const gameArea = 
-    document,getElementById("gameArea")
-    
+    document.getElementById("gameArea");
+
 let timer = 0;
 
 let timerInterval;
@@ -147,6 +147,10 @@ function updateBall(){
 
                 achievement.innerText =
                     "Scored 10 Points";
+                    
+                document.getElementById(
+                    "emptyAchievementText"
+                ).style.display = "none";
 
                 achievementList.appendChild(
                     achievement
