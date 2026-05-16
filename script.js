@@ -14,6 +14,7 @@ const themeselect = document.getElementById("themeselect");
 const playerName = document.getElementById("playerName");
 const welcomeText = document.getElementById("welcomeText");
 const achievementList = document.getElementById("achievementList");
+const pauseOverlay = document.getElementById("pauseOverlay");
 
 let timer = 0;
 let timerInterval;
