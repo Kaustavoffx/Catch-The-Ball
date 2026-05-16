@@ -98,6 +98,21 @@ h1{
     #basket{
         width:80px;
     }
+
+    #statsContainer{
+        flex-direction:column ;
+        align-items:center ;
+    }
+
+    #settingsPanel{
+        width:90%;
+    }
+    
+    #achievementBoard{
+        width:90%;
+    }
+
+
 }
 
 #highScoreBoard{
