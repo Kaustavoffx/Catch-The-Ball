@@ -19,7 +19,7 @@ h1{
     position:relative;
     overflow:hidden;
     border:4px solid white;
-    box-shadow:0 0 30 px rgba(255,255,255,0.2);
+    box-shadow:0 0 30px rgba(255,255,255,0.2);
 }
 
 #basket{
@@ -130,7 +130,7 @@ button:hover{
     opacity:0.9;
 }
 
-#startscreen{
+#startScreen{
     margin-top:20px ;
     padding :20px ;   
 }
@@ -144,8 +144,8 @@ button:hover{
 }
 
 .scorePop{
-    transform:scale(1,2);
-    color:#22c55e
+    transform:scale(1.2);
+    color:#22c55e;
 }
 
 #timerBoard{
@@ -156,6 +156,6 @@ button:hover{
 footer{
     margin-top:20px;
     padding:20px;
-    color:#94a32b;
+    color:#94a328;
     font-size:14px;
 }
