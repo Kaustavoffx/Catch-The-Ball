@@ -30,7 +30,7 @@ h1{
 
     background-size:40px 40px ;
 
-    margin:20px auto;
+    margin:30px auto;
     position:relative;
     overflow:hidden;
     border:4px solid white;
@@ -150,6 +150,13 @@ button:hover{
     opacity:0.9;
 }
 
+#pauseBtn,
+#startBtn{
+
+    margin-top:10px ;
+    margin-bottom:10px ;
+}
+
 #startScreen{
     margin-top:20px ;
     padding :20px ;   
@@ -174,18 +181,18 @@ button:hover{
 }
 
 footer{
-    margin-top:20px;
-    padding:20px;
+    margin-top:40px;
+    padding:50px;
     color:#94a3b8;
     font-size:14px;
 }
 
 #settingsPanel{
-    width:300px ;
-    margin:20px auto ;
-    padding:20px ;
+    width:320px ;
+    margin:25px auto ;
+    padding:24px ;
     background:#1e293b ;
-    border-radius:12px ;
+    border-radius:16px ;
 }
 
 #settingsPanel h3{
@@ -193,9 +200,13 @@ footer{
 }
 
 #settingsPanel select{
-    padding:8px;
-    border-radius:6px ;
-    margin-top:5px ;
+    background:#0f172a;
+    color:white;
+    border:none ;
+    padding:10px ;
+    width:100% ;
+    margin-top:10px;
+    border-radius:8px ;
 }
 
 .lightMode{
@@ -214,7 +225,12 @@ footer{
 }
 
 #playerSection{
-    margin-top:20px ;
+
+    margin-top:25px ;
+    display:flex;
+    flex-direction:column ;
+    align-items: center;
+    gap:12px;
 }
 
 #playerName{
@@ -224,11 +240,12 @@ footer{
 }
 
 #achievementBoard{
-    width:300px;
-    margin:20px auto;
-    padding:20px;
+    width:320px;
+    margin:30px auto;
+    padding:24px;
     background: #1e293b;
-    border-radius:12px ;
+    border-radius:16px ;
+    box-shadow:0 0 20px rgba(255,255,255,0.08) ;
 }
 
 #achievementList{
@@ -371,4 +388,27 @@ button:active{
 .lightMode #achievementBoard{
     background:#cbd5e1 ;
     color:black;
+}
+
+#settingsPanel label{
+    font-size:15px ;
+    color:#cbd5e1 ; 
+}
+
+#statsContainer{
+    width:90%;
+    max-width:800px ;
+    margin:25px auto;
+    display:flex ;
+    flex-wrap:wrap ;
+    justify-content:center ;
+    gap:15px
+}
+
+#statsContainer div{
+    background:#1e293b;
+    min-width:120px ;
+    padding:14px 18px ;
+    border-radius:14px ;
+    box-shadow:0 0 15px rgba(255,255,255,0.08) ;
 }
