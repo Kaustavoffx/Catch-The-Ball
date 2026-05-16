@@ -10,11 +10,12 @@ const finalScoreText = document.getElementById("finalScoreText");
 const restartBtn = document.getElementById("restartBtn");
 const timerText = document.getElementById("timer");
 const difficultyselect = document.getElementById("difficultySelect");
-const themeselect = document.getElementById("themeselect");
+const themeselect = document.getElementById("themeSelect");
 const playerName = document.getElementById("playerName");
 const welcomeText = document.getElementById("welcomeText");
 const achievementList = document.getElementById("achievementList");
 const pauseOverlay = document.getElementById("pauseOverlay");
+const savePlayerBn = document.getElementById("savePlayerBtn");
 
 let timer = 0;
 let timerInterval;
@@ -30,6 +31,15 @@ let gameRunning = false;
 let highScore = localStorage.getItem("highScore") || 0;
 
 highScoreText.innerText = highScore;
+
+const savedPlayer =  localStorage.getItem("playerName");
+
+if(savedPlayer){
+
+    welcomeText.innerText ="Welcome Back" + savedPlayer;
+
+    playerName.value = savedPlayer;
+}
 
 document.addEventListener("mousemove", moveBasket);
 
@@ -289,16 +299,16 @@ document.addEventListener("touchmove", function(event){
 themeselect.addEventListener("change", function(){
     if(themeselect.value === "light"){
         
-        document.body.classList.add(lightMode);
+        document.body.classList.add("lightMode");
     }else{
 
-        document.body.classList.remove("lightmode");
+        document.body.classList.remove("lightMode");
     }
 });
 
-savePlayerBn.addEventListener("click",function(){
+savePlayerBtn.addEventListener("click",function(){
     localStorage.setItem("playerName", playerName.value);
 
     welcomeText.innerText = 
-        "welcome Back, " + playerName.value;
+        "Welcome Back, " + playerName.value;
 });
