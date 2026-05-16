@@ -178,3 +178,18 @@ footer{
     border-radius:6px ;
     margin-top:5px ;
 }
+
+.lightMode{
+    background:white;
+    color:black;
+}
+
+.lightMode #gameArea{
+    background: #e2e8f0;
+    border-color:black;
+}
+
+.lightMode #modalContent{
+    background:white;
+    color:black;
+}

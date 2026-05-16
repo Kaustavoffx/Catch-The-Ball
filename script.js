@@ -272,3 +272,13 @@ document.addEventListener("touchmove", function(event){
 
     basket.style.left = basketX + "px";
 });
+
+themeselect.addEventListener("change", function(){
+    if(themeselect.value === "light"){
+        
+        document.body.classList.add(lightMode);
+    }else{
+
+        document.body.classList.remove("lightmode");
+    }
+});
