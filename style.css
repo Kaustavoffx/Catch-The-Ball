@@ -15,6 +15,21 @@ h1{
     width:400px;
     height:600px;
     background:#222;
+
+    background-image: 
+    linear-gradient(
+    rgba(255,255,255,0.05) 1px,
+    transparent 1px
+    ),
+
+    linear-gradient(
+    90deg,
+    rgba(255,255,255,0.05) 1px,
+    transparent 1px
+    );
+
+    background-size:40px 40px ;
+
     margin:20px auto;
     position:relative;
     overflow:hidden;
@@ -22,6 +37,7 @@ h1{
     box-shadow:0 0 30px rgba(255,255,255,0.2);
     border-radius:12px;
 }
+
 
 #basket{
     width:100px;
@@ -305,6 +321,6 @@ h1{
 }
 
 button:active{
-    
+
     transform:scale(0.96);
 }
