@@ -176,6 +176,14 @@ function updateBall(){
 
             comboText.innerText = combo;
 
+            document.body.classList.add("shake");
+
+            setTimeout(function(){
+
+                document.body.classList.remove("shake");
+
+            }, 300);
+
             if(lives <= 0){
 
                 lives = 0;
