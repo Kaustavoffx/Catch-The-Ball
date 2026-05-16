@@ -1,4 +1,4 @@
-#Day 1 Dev Log
+# Day 1 Dev Log
 
 Date:
 15 May 2026
@@ -8,49 +8,49 @@ Around 5 Hours
 
 works completed:
 
--Created game structure
--Added basket Movement
--Added falling ball system
--Implemented score tracking
--Added lives system
--Added pause and reume
--Fixed collision issues
--Added high score system
--Added game over modal
--Improved responsive layout
+- Created game structure
+- Added basket Movement
+- Added falling ball system
+- Implemented score tracking
+- Added lives system
+- Added pause and reume
+- Fixed collision issues
+- Added high score system
+- Added game over modal
+- Improved responsive layout
 
 Problems Faced:
 
--Ball reset bugs
--Collisions inconsistencies
--Lives counter going below zero
--Modal rendering issues
+- Ball reset bugs
+- Collisions inconsistencies
+- Lives counter going below zero
+- Modal rendering issues
 
 Next Goals:
 
--Add touch controls
--Improve UI animations
--Add sound effects
--create better game balancing
+- Add touch controls
+- Improve UI animations
+- Add sound effects
+- create better game balancing
 
 
-##Late Night Session
+## Late Night Session
 
 additional Time:
 4 hours (added 1/2 hours for some testing also)
 
 completed:
--Added start screen
--Added timer system
--Added score animations
--Improved Ui polish
--added footer section
--Improved visual effects
+- Added start screen
+- Added timer system
+- Added score animations
+-  Improved Ui polish
+- added footer section
+- Improved visual effects
 
 Issues faced:
--Timer reset bugs
--animation timing adjustments
--Layout spacing refinements
+- Timer reset bugs
+- animation timing adjustments
+- Layout spacing refinements
 
 
 --------------------------------------------------------------
@@ -94,5 +94,24 @@ Additional Progress:
 -Improved Settings styling
 -Added Visual polish effects
 -Improved scoreboard layout
+
+## Night Session
+
+Time Spent :
+around 5 hours (testing included)
+
+Completed:
+- Improved animations
+- Added gameplay polish
+- Improved achievement visuals
+- Enhanced Ui responsiveness
+- refined spacing and layout
+- Improved theme Consistency
+
+Problems Faced:
+- Animations timing issues
+- Theme contrast inconsistencies
+- Layout spacing bugs
+- Mobile responsiveness adjustments
 
 --------------------------------------------------------------
