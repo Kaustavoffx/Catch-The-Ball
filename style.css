@@ -355,5 +355,20 @@ button:active{
 
 #emptyAchievementText{
     color:#94a3b8;
-    font-size: 
+    font-size:14px; 
+}
+
+.lightMode #statsContainer div{
+    background:#cbd5e1;
+    color:black;
+}
+
+.lightMode #settingsPanel {
+    background:#cbd5e1 ;
+    color:black ;
+}
+
+.lightMode #achievementBoard{
+    background:#cbd5e1 ;
+    color:black;
 }
