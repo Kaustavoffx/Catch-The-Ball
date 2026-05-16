@@ -37,6 +37,9 @@ const savePlayerBtn =
 const comboText =
     document.getElementById("combo");
 
+const gameArea = 
+    document,getElementById("gameArea")
+    
 let timer = 0;
 
 let timerInterval;
@@ -295,6 +298,14 @@ function startGame(){
         timerText.innerText = timer;
 
     }, 1000);
+
+    gameArea.style.transform = "scale(1.02)";
+
+    setTimeout(function(){
+
+        gameArea.style.transform = "scale(1)";
+
+    },300);
 
     startBtn.disabled = true;
 

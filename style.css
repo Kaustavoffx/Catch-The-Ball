@@ -348,3 +348,7 @@ button:active{
         transform:translateY(0);
     }
 }
+
+#gameArea{
+    transition:0.3s;
+}
