@@ -324,3 +324,27 @@ button:active{
 
     transform:scale(0.96);
 }
+
+#achievementList li{
+
+    background:#0f172a;
+
+    margin-top:10px ;
+
+    padding:10px ;
+
+    border-radius:8px ;
+    
+    animation:fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(10px) ;
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
