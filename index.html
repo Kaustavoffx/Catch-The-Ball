@@ -9,35 +9,54 @@
 
 <body>
 
-    <div id="playerSelection">
-        <input type="text" id="playerName" placeholder=""Enter Your Name">
+    <div id="playerSection">
+
+        <input
+            type="text"
+            id="playerName"
+            placeholder="Enter Your Name"
+        >
 
         <button id="savePlayerBtn">
             Save Name
         </button>
 
         <p id="welcomeText"></p>
+
     </div>
 
     <h1>Catch The Ball</h1>
-    
+
     <p id="instructions">
         Move the basket using mouse or arrow keys to catch the falling ball.
     </p>
 
     <button id="pauseBtn">Pause</button>
+
     <button id="startBtn">Start Game</button>
-    <div id="settingsPanner">
+
+    <div id="settingsPanel">
+
         <h3>Settings</h3>
 
         <label>
-            Difiiculty:
+            Difficulty:
         </label>
 
         <select id="difficultySelect">
-            <option value="easy">Easy</option>
-            <option value="medium" selected>Medium</option>
-            <option value="hard">Hard</option>
+
+            <option value="easy">
+                Easy
+            </option>
+
+            <option value="medium" selected>
+                Medium
+            </option>
+
+            <option value="hard">
+                Hard
+            </option>
+
         </select>
 
         <br><br>
@@ -47,64 +66,94 @@
         </label>
 
         <select id="themeSelect">
-            <option value="dark">Dark</option>
-            <option value="light">Light</option>
+
+            <option value="dark">
+                Dark
+            </option>
+
+            <option value="light">
+                Light
+            </option>
+
         </select>
 
     </div>
 
     <div id="pauseOverlay">
+
         <h2>Game Paused</h2>
+
     </div>
 
     <div id="startScreen">
+
         <h2>Welcome To Catch The Ball</h2>
+
         <p>Press Start to Play</p>
+
     </div>
 
-    <div id="timerBoard">
-        Time: <span id ="timer">0</span>s 
+    <div id="statsContainer">
+
+        <div id="timerBoard">
+            Time: <span id="timer">0</span>s
+        </div>
+
+        <div id="highScoreBoard">
+            High Score: <span id="highScore">0</span>
+        </div>
+
+        <div id="scoreBoard">
+            Score: <span id="score">0</span>
+        </div>
+
+        <div id="comboBoard">
+            Combo: <span id="combo">0</span>
+        </div>
+
+        <div id="livesBoard">
+            Lives: <span id="lives">3</span>
+        </div>
+
     </div>
 
     <div id="gameArea">
+
         <div id="basket"></div>
+
         <div id="ball"></div>
-    </div>
-    
-    <div id="highScoreBoard">
-        High Score: <span id="highScore">0</span>
-    </div>
 
-    <div id="scoreBoard">
-        Score: <span id="score">0</span>
-    </div>
-
-    <div id="comboBoard">
-        Combo: <span id="combo">0</span>
     </div>
 
     <div id="achievementBoard">
+
         <h3>Achievements</h3>
+
         <ul id="achievementList"></ul>
+
     </div>
 
-    <div id="livesBoard">
-        Lives: <span id="lives">3</span>
-    </div>
+    <div id="gameOverModal">
 
-    <div id = "gameOverModal">
-        <div id = "modalContent">
+        <div id="modalContent">
+
             <h2>Game Over</h2>
-            <p id = "finalScoreText"></p>
-            <button id="restartBtn">Restart</button>
+
+            <p id="finalScoreText"></p>
+
+            <button id="restartBtn">
+                Restart
+            </button>
+
         </div>
+
     </div>
 
     <script src="script.js"></script>
 
     <footer>
-    Built by Kaustav Chowdhury
+        Built by Kaustav Chowdhury
     </footer>
 
 </body>
-</html>
+</html> 
