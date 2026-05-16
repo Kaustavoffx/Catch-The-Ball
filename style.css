@@ -201,3 +201,16 @@ footer{
 #playerName{
     padding: 10px 16px;
 }
+
+#achievementsBoard{
+    width:300px;
+    margin:20px auto;
+    padding:20px;
+    background: #1e293b;
+    border-radius:12px ;
+}
+
+#achievementsList{
+    list-style:none;
+    padding:0;
+}

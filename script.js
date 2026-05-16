@@ -13,6 +13,7 @@ const difficultyselect = document.getElementById("difficultySelect");
 const themeselect = document.getElementById("themeselect");
 const playerName = document.getElementById("playerName");
 const welcomeText = document.getElementById("welcomeText");
+const achievementList = document.getElementById("achievementList");
 
 let timer = 0;
 let timerInterval;
@@ -79,7 +80,15 @@ function updateBall(){
                 scoreText.classList.remove("scorePop");
 
             }, 200);
+            if(score === 10){
 
+                const achievement = document.createElement("li");
+                
+                achievement.innerText = "Scored 10 Points";
+                
+                achievementList.appendChild(achievement);
+            }
+            
             if(score > highScore){
 
                 highScore = score;
@@ -146,6 +155,7 @@ function startGame(){
     pauseBtn.innerText = "Pause";
 
     score = 0;
+
 
     lives = 3;
 
