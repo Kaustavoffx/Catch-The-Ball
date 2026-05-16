@@ -147,7 +147,20 @@ function startGame(){
 
     lives = 3;
 
-    speed = 4;
+    const difficulty = difficultyselect.value;
+
+    if(difficulty === "easy"){
+        speed = 3;
+        lives = 5;
+    }
+    if(difficulty === "medium"){
+        speed=4;
+        lives=3;
+    }
+    if(difficulty === "hard"){
+        speed=6;
+        lives=2;
+    }
 
     timer = 0;
 
