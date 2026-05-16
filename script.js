@@ -9,6 +9,8 @@ const gameOverModal = document.getElementById("gameOverModal");
 const finalScoreText = document.getElementById("finalScoreText");
 const restartBtn = document.getElementById("restartBtn");
 const timerText = document.getElementById("timer");
+const difficultyselect = document.getElementById("difficultySelect");
+const themeselect = document.getElementById("themeselect");
 
 let timer = 0;
 let timerInterval;
@@ -237,6 +239,7 @@ pauseBtn.addEventListener("click", function(){
         paused = false;
     }
 });
+
 
 document.addEventListener("touchmove", function(event){
 

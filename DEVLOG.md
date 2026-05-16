@@ -55,3 +55,23 @@ Issues faced:
 
 --------------------------------------------------------------
 #Day 2 Dev Log
+
+Date:
+16 May 2026
+
+Time Spent:
+1.30 hrs (ongoing)
+
+works completed:
+- Day 1 Html and css errors are now fixed
+
+Problems faced
+- Footer issue in Html
+
+Next Goals
+- small features adding
+- Ui refining adding
+- gameplay enhancement 
+- refactoring the codes
+- settings may be added
+- Interaction updates tiny
