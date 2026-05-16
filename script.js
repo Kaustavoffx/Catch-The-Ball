@@ -4,39 +4,73 @@ const scoreText = document.getElementById("score");
 const startBtn = document.getElementById("startBtn");
 const livesText = document.getElementById("lives");
 const pauseBtn = document.getElementById("pauseBtn");
+
 const highScoreText = document.getElementById("highScore");
+
 const gameOverModal = document.getElementById("gameOverModal");
 const finalScoreText = document.getElementById("finalScoreText");
 const restartBtn = document.getElementById("restartBtn");
+
 const timerText = document.getElementById("timer");
-const difficultyselect = document.getElementById("difficultySelect");
-const themeselect = document.getElementById("themeSelect");
-const playerName = document.getElementById("playerName");
-const welcomeText = document.getElementById("welcomeText");
-const achievementList = document.getElementById("achievementList");
-const pauseOverlay = document.getElementById("pauseOverlay");
-const savePlayerBn = document.getElementById("savePlayerBtn");
+
+const difficultySelect =
+    document.getElementById("difficultySelect");
+
+const themeSelect =
+    document.getElementById("themeSelect");
+
+const playerName =
+    document.getElementById("playerName");
+
+const welcomeText =
+    document.getElementById("welcomeText");
+
+const achievementList =
+    document.getElementById("achievementList");
+
+const pauseOverlay =
+    document.getElementById("pauseOverlay");
+
+const savePlayerBtn =
+    document.getElementById("savePlayerBtn");
+
+const comboText =
+    document.getElementById("combo");
 
 let timer = 0;
+
 let timerInterval;
+
 let paused = false;
+
 let basketX = 150;
+
 let ballX = Math.random() * 340;
 let ballY = 0;
+
 let lives = 3;
 let score = 0;
+
 let speed = 4;
+
+let combo = 0;
+
 let gameInterval;
+
 let gameRunning = false;
-let highScore = localStorage.getItem("highScore") || 0;
+
+let highScore =
+    localStorage.getItem("highScore") || 0;
 
 highScoreText.innerText = highScore;
 
-const savedPlayer =  localStorage.getItem("playerName");
+const savedPlayer =
+    localStorage.getItem("playerName");
 
 if(savedPlayer){
 
-    welcomeText.innerText ="Welcome Back " + savedPlayer;
+    welcomeText.innerText =
+        "Welcome Back, " + savedPlayer;
 
     playerName.value = savedPlayer;
 }
@@ -45,11 +79,14 @@ document.addEventListener("mousemove", moveBasket);
 
 function moveBasket(event){
 
-    const gameArea = document.getElementById("gameArea");
+    const gameArea =
+        document.getElementById("gameArea");
 
-    const rect = gameArea.getBoundingClientRect();
+    const rect =
+        gameArea.getBoundingClientRect();
 
-    basketX = event.clientX - rect.left - 50;
+    basketX =
+        event.clientX - rect.left - 50;
 
     if(basketX < 0){
         basketX = 0;
@@ -71,16 +108,24 @@ function updateBall(){
     ballY += speed;
 
     ball.style.top = ballY + "px";
+
     ball.style.left = ballX + "px";
 
     if(ballY > 520){
 
         if(
+
             ballX + 30 > basketX &&
+
             ballX < basketX + 100
+
         ){
 
             score++;
+
+            combo++;
+
+            comboText.innerText = combo;
 
             scoreText.innerText = score;
 
@@ -91,31 +136,45 @@ function updateBall(){
                 scoreText.classList.remove("scorePop");
 
             }, 200);
+
             if(score === 10){
 
-                const achievement = document.createElement("li");
-                
-                achievement.innerText = "Scored 10 Points";
-                
-                achievementList.appendChild(achievement);
+                const achievement =
+                    document.createElement("li");
+
+                achievement.innerText =
+                    "Scored 10 Points";
+
+                achievementList.appendChild(
+                    achievement
+                );
             }
-            
+
             if(score > highScore){
 
                 highScore = score;
 
-                localStorage.setItem("highScore", highScore);
+                localStorage.setItem(
+                    "highScore",
+                    highScore
+                );
 
-                highScoreText.innerText = highScore;
+                highScoreText.innerText =
+                    highScore;
             }
 
             if(score % 5 === 0){
+
                 speed += 1;
             }
 
         }else{
 
             lives--;
+
+            combo = 0;
+
+            comboText.innerText = combo;
 
             if(lives <= 0){
 
@@ -131,9 +190,11 @@ function updateBall(){
 
                 livesText.innerText = lives;
 
-                finalScoreText.innerText = "Final Score: " + score;
+                finalScoreText.innerText =
+                    "Final Score: " + score;
 
-                gameOverModal.style.display = "flex";
+                gameOverModal.style.display =
+                    "flex";
 
                 startBtn.disabled = false;
 
@@ -150,6 +211,7 @@ function updateBall(){
 function resetBall(){
 
     ballY = 0;
+
     ballX = Math.random() * 340;
 
     ball.style.top = ballY + "px";
@@ -165,24 +227,38 @@ function startGame(){
 
     pauseBtn.innerText = "Pause";
 
+    pauseOverlay.style.display = "none";
+
     score = 0;
 
+    combo = 0;
+
+    comboText.innerText = combo;
 
     lives = 3;
 
-    const difficulty = difficultyselect.value;
+    const difficulty =
+        difficultySelect.value;
 
     if(difficulty === "easy"){
+
         speed = 3;
+
         lives = 5;
     }
+
     if(difficulty === "medium"){
-        speed=4;
-        lives=3;
+
+        speed = 4;
+
+        lives = 3;
     }
+
     if(difficulty === "hard"){
-        speed=6;
-        lives=2;
+
+        speed = 6;
+
+        lives = 2;
     }
 
     timer = 0;
@@ -201,7 +277,8 @@ function startGame(){
 
     clearInterval(timerInterval);
 
-    gameInterval = setInterval(updateBall, 20);
+    gameInterval =
+        setInterval(updateBall, 20);
 
     timerInterval = setInterval(function(){
 
@@ -213,102 +290,160 @@ function startGame(){
 
     startBtn.disabled = true;
 
-    document.getElementById("startScreen").style.display = "none";
+    document.getElementById(
+        "startScreen"
+    ).style.display = "none";
 }
 
-startBtn.addEventListener("click", startGame);
+startBtn.addEventListener(
+    "click",
+    startGame
+);
 
-restartBtn.addEventListener("click", function(){
+restartBtn.addEventListener(
+    "click",
+    function(){
 
-    gameOverModal.style.display = "none";
+        gameOverModal.style.display =
+            "none";
 
-    startGame();
-});
-
-document.addEventListener("keydown", function(event){
-
-    if(event.key === "ArrowLeft"){
-        basketX -= 30;
+        startGame();
     }
+);
 
-    if(event.key === "ArrowRight"){
-        basketX += 30;
+document.addEventListener(
+    "keydown",
+    function(event){
+
+        if(event.key === "ArrowLeft"){
+
+            basketX -= 30;
+        }
+
+        if(event.key === "ArrowRight"){
+
+            basketX += 30;
+        }
+
+        if(basketX < 0){
+
+            basketX = 0;
+        }
+
+        if(basketX > 300){
+
+            basketX = 300;
+        }
+
+        basket.style.left =
+            basketX + "px";
     }
+);
 
-    if(basketX < 0){
-        basketX = 0;
+pauseBtn.addEventListener(
+    "click",
+    function(){
+
+        if(!paused){
+
+            clearInterval(gameInterval);
+
+            clearInterval(timerInterval);
+
+            pauseBtn.innerText = "Resume";
+
+            pauseOverlay.style.display =
+                "flex";
+
+            paused = true;
+
+        }else{
+
+            gameInterval =
+                setInterval(updateBall, 20);
+
+            timerInterval =
+                setInterval(function(){
+
+                    timer++;
+
+                    timerText.innerText =
+                        timer;
+
+                }, 1000);
+
+            pauseBtn.innerText = "Pause";
+
+            pauseOverlay.style.display =
+                "none";
+
+            paused = false;
+        }
     }
+);
 
-    if(basketX > 300){
-        basketX = 300;
+document.addEventListener(
+    "touchmove",
+    function(event){
+
+        const gameArea =
+            document.getElementById(
+                "gameArea"
+            );
+
+        const rect =
+            gameArea.getBoundingClientRect();
+
+        basketX =
+            event.touches[0].clientX -
+            rect.left -
+            50;
+
+        if(basketX < 0){
+
+            basketX = 0;
+        }
+
+        if(basketX > 300){
+
+            basketX = 300;
+        }
+
+        basket.style.left =
+            basketX + "px";
     }
+);
 
-    basket.style.left = basketX + "px";
-});
+themeSelect.addEventListener(
+    "change",
+    function(){
 
-pauseBtn.addEventListener("click", function(){
+        if(themeSelect.value === "light"){
 
-    if(!paused){
+            document.body.classList.add(
+                "lightMode"
+            );
 
-        clearInterval(gameInterval);
+        }else{
 
-        clearInterval(timerInterval);
-
-        pauseBtn.innerText = "Resume";
-
-        paused = true;
-
-    }else{
-
-        gameInterval = setInterval(updateBall, 20);
-
-        timerInterval = setInterval(function(){
-
-            timer++;
-
-            timerText.innerText = timer;
-
-        }, 1000);
-
-        pauseBtn.innerText = "Pause";
-
-        paused = false;
+            document.body.classList.remove(
+                "lightMode"
+            );
+        }
     }
-});
+);
 
+savePlayerBtn.addEventListener(
+    "click",
+    function(){
 
-document.addEventListener("touchmove", function(event){
+        localStorage.setItem(
+            "playerName",
+            playerName.value
+        );
 
-    const gameArea = document.getElementById("gameArea");
-
-    const rect = gameArea.getBoundingClientRect();
-
-    basketX = event.touches[0].clientX - rect.left - 50;
-
-    if(basketX < 0){
-        basketX = 0;
+        welcomeText.innerText =
+            "Welcome Back, " +
+            playerName.value;
     }
-
-    if(basketX > 300){
-        basketX = 300;
-    }
-
-    basket.style.left = basketX + "px";
-});
-
-themeselect.addEventListener("change", function(){
-    if(themeselect.value === "light"){
-        
-        document.body.classList.add("lightMode");
-    }else{
-
-        document.body.classList.remove("lightMode");
-    }
-});
-
-savePlayerBtn.addEventListener("click",function(){
-    localStorage.setItem("playerName", playerName.value);
-
-    welcomeText.innerText = 
-        "Welcome Back, " + playerName.value;
-});
+);
