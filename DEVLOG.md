@@ -60,7 +60,7 @@ Date:
 16 May 2026
 
 Time Spent:
-3.5 hrs (ongoing)
+Around 5 hours
 
 works completed:
 - Day 1 Html and css errors are now fixed
@@ -86,3 +86,11 @@ Next Goals
 - Combo system
 - Particle effects
 - Better achievements tracking
+
+Additional Progress:
+-Added combo system
+-Added game feel animations
+-Added game feel animations
+-Improved Settings styling
+-Added Visual polish effects
+-Improved scoreboard layout
