@@ -36,7 +36,7 @@ const savedPlayer =  localStorage.getItem("playerName");
 
 if(savedPlayer){
 
-    welcomeText.innerText ="Welcome Back" + savedPlayer;
+    welcomeText.innerText ="Welcome Back " + savedPlayer;
 
     playerName.value = savedPlayer;
 }
