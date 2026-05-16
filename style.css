@@ -193,3 +193,11 @@ footer{
     background:white;
     color:black;
 }
+
+#playerSelection{
+    margin-top:20px ;
+}
+
+#playerName{
+    padding: 10px 16px;
+}

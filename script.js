@@ -11,6 +11,8 @@ const restartBtn = document.getElementById("restartBtn");
 const timerText = document.getElementById("timer");
 const difficultyselect = document.getElementById("difficultySelect");
 const themeselect = document.getElementById("themeselect");
+const playerName = document.getElementById("playerName");
+const welcomeText = document.getElementById("welcomeText");
 
 let timer = 0;
 let timerInterval;
@@ -281,4 +283,11 @@ themeselect.addEventListener("change", function(){
 
         document.body.classList.remove("lightmode");
     }
+});
+
+savePlayerBn.addEventListener("click",function(){
+    localStorage.setItem("playerName", playerName.value);
+
+    welcomeText.innerText = 
+        "welcome Back, " + playerName.value;
 });
