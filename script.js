@@ -351,8 +351,7 @@ function resetBall(){
 
 function startCountdown(){
 
-    pauseOverlay.style.display = 
-        "flex";
+    startCountdown();
 
     document.getElementById(
         "pauseContent"
@@ -360,34 +359,82 @@ function startCountdown(){
 
         <h2 id="countdownText">
 
-        3
+            3
 
         </h2>
-    
+
     `;
+
     let count = 3;
 
-    const countdownInterval = 
+    const countdownInterval =
 
         setInterval(function(){
 
-            count --;
+            count--;
 
             if(count > 0){
 
                 document.getElementById(
                     "countdownText"
                 ).innerText = count;
+
             }else{
+
                 clearInterval(
                     countdownInterval
                 );
-                pauseOverlay.style.display = 
+
+                pauseOverlay.style.display =
                     "none";
-                    
-                startCountdown();
-                
-                pauseBtn.innerText=
+
+                gameInterval =
+                    setInterval(
+                        updateBall,
+                        20
+                    );
+
+                timerInterval =
+                    setInterval(function(){
+
+                        timer++;
+
+                        timerText.innerText =
+                            timer;
+
+                        if(timer === 30){
+
+                            const achievement =
+                                document.createElement("li");
+
+                            achievement.innerText =
+                                "Survived 30 Seconds";
+
+                            document.getElementById(
+                                "emptyAchievementText"
+                            ).style.display = "none";
+
+                            achievementList.appendChild(
+                                achievement
+                            );
+                        }
+
+                        if(timer === 60){
+
+                            const achievement =
+                                document.createElement("li");
+
+                            achievement.innerText =
+                                "Survived 60 Seconds";
+
+                            achievementList.appendChild(
+                                achievement
+                            );
+                        }
+
+                    }, 1000);
+
+                pauseBtn.innerText =
                     "⏸ Pause";
 
                 paused = false;
@@ -395,7 +442,7 @@ function startCountdown(){
                 document.getElementById(
                     "pauseContent"
                 ).innerHTML = `
-                
+
                     <h2>
 
                         Game Paused
@@ -405,23 +452,25 @@ function startCountdown(){
                     <button id="resumeBtn">
 
                         ▶ Resume Game
+
                     </button>
+
                 `;
+
                 document.getElementById(
                     "resumeBtn"
-            
                 ).addEventListener(
                     "click",
                     function(){
+
                         startCountdown();
+
                     }
                 );
             }
 
-        },1000);
+        }, 1000);
 }
-
-
 
 function startGame(){
 
@@ -503,51 +552,6 @@ function startGame(){
     ).style.display = "none";
 }
 
-startBtn.addEventListener(
-    "click",
-    startGame
-);
-
-restartBtn.addEventListener(
-    "click",
-    function(){
-
-        gameOverModal.style.display =
-            "none";
-
-        startGame();
-    }
-);
-
-document.addEventListener(
-    "keydown",
-    function(event){
-
-        if(event.key === "ArrowLeft"){
-
-            basketX -= 30;
-        }
-
-        if(event.key === "ArrowRight"){
-
-            basketX += 30;
-        }
-
-        if(basketX < 0){
-
-            basketX = 0;
-        }
-
-        if(basketX > 300){
-
-            basketX = 300;
-        }
-
-        basket.style.left =
-            basketX + "px";
-    }
-);
-
 pauseBtn.addEventListener(
     "click",
     function(){
@@ -558,7 +562,8 @@ pauseBtn.addEventListener(
 
             clearInterval(timerInterval);
 
-            pauseBtn.innerText = "▶ Resume";
+            pauseBtn.innerText =
+                "▶ Resume";
 
             pauseOverlay.style.display =
                 "flex";
@@ -567,95 +572,17 @@ pauseBtn.addEventListener(
 
         }else{
 
-            startCountdown();
+            pauseOverlay.style.display =
+                "flex";
         }
     }
 );
 
-document.addEventListener(
-    "touchmove",
-    function(event){
-
-        const gameArea =
-            document.getElementById(
-                "gameArea"
-            );
-
-        const rect =
-            gameArea.getBoundingClientRect();
-
-        basketX =
-            event.touches[0].clientX -
-            rect.left -
-            50;
-
-        if(basketX < 0){
-
-            basketX = 0;
-        }
-
-        if(basketX > 300){
-
-            basketX = 300;
-        }
-
-        basket.style.left =
-            basketX + "px";
-    }
-);
-
-themeSelect.addEventListener(
-    "change",
-    function(){
-
-        localStorage.setItem(
-            "theme",
-            themeSelect.value
-        );
-    
-        if(themeSelect.value === "light"){
-
-            document.body.classList.add(
-                "lightMode"
-            );
-
-        }else{
-
-            document.body.classList.remove(
-                "lightMode"
-            );
-        }
-    }
-);
-
-savePlayerBtn.addEventListener(
+resumeBtn.addEventListener(
     "click",
     function(){
 
-        localStorage.setItem(
-            "playerName",
-            playerName.value
-        );
+        startCountdown();
 
-        welcomeText.innerText =
-            "Welcome Back, " +
-            playerName.value;
-    }
-);
-
-window.addEventListener(
-
-    "load",
-
-    function(){
-
-        setTimeout(function(){
-
-            document.getElementById(
-                "loadingScreen"
-                
-            ).style.display = "none";
-
-        },2000);
     }
 );
