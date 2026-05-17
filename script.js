@@ -167,6 +167,36 @@ function updateBall(){
             combo++;
 
             comboText.innerText = combo;
+
+            if(combo === 5){
+
+                const achievement=
+                    document.createElement("li");
+
+                achievement.innerText =
+                    "Combo Master 5";
+
+                document.getElementById(
+                    "emptyAchievementText"
+                ).style.display = "none";
+
+                achievementList.appendChild(
+                    achievement
+                );
+            }
+
+            if (combo === 10){
+                const achievement = 
+                    document.createElement("li");
+
+                achievement.innerText =
+                    "Combo Master 10";
+
+                achievementList.appendChild(
+                    achievement
+                );
+            }
+
             if(combo>bestCombo){
                 bestCombo = combo;
                 bestComboText.innerText =
@@ -387,6 +417,23 @@ function startGame(){
         timer++;
 
         timerText.innerText = timer;
+
+        if(timer === 30){
+
+            const achievement = 
+                document.createElement("li");
+
+            achievement.innerText =
+                "Survived 30 Seconds";
+
+            document.getElementById(
+                "emptyAchievementText"
+            ).style.display = "none";
+
+            achievementList.appendChild(
+                achievement
+            );
+        }
 
     }, 1000);
 
