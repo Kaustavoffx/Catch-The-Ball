@@ -56,6 +56,9 @@ const soundSelect =
 const bestComboText = 
     document.getElementById("bestCombo");
 
+const resumeBtn = 
+    document.getElementById("resumeBtn");
+
 let timer = 0;
 
 let timerInterval;
@@ -346,6 +349,80 @@ function resetBall(){
     ball.style.left = ballX + "px";
 }
 
+function startCountdown(){
+
+    pauseOverlay.style.display = 
+        "flex";
+
+    document.getElementById(
+        "pauseContent"
+    ).innerHTML = `
+
+        <h2 id="countdownText">
+
+        3
+
+        </h2>
+    
+    `;
+    let count = 3;
+
+    const countdownInterval = 
+
+        setInterval(function(){
+
+            count --;
+
+            if(count > 0){
+
+                document.getElementById(
+                    "countdownText"
+                ).innerText = count;
+            }else{
+                clearInterval(
+                    countdownInterval
+                );
+                pauseOverlay.style.display = 
+                    "none";
+                    
+                startCountdown();
+                
+                pauseBtn.innerText=
+                    "⏸ Pause";
+
+                paused = false;
+
+                document.getElementById(
+                    "pauseContent"
+                ).innerHTML = `
+                
+                    <h2>
+
+                        Game Paused
+
+                    </h2>
+
+                    <button id="resumeBtn">
+
+                        ▶ Resume Game
+                    </button>
+                `;
+                document.getElementById(
+                    "resumeBtn"
+            
+                ).addEventListener(
+                    "click",
+                    function(){
+                        startCountdown();
+                    }
+                );
+            }
+
+        },1000);
+}
+
+
+
 function startGame(){
 
     gameRunning = true;
@@ -409,46 +486,7 @@ function startGame(){
 
     clearInterval(timerInterval);
 
-    gameInterval =
-        setInterval(updateBall, 20);
-
-    timerInterval = setInterval(function(){
-
-        if(timer === 60){
-
-            const achievement =
-                document.createElement("li");
-
-            achievement.innerText =
-                "Survived 60 Seconds";
-
-            achievementList.appendChild(
-                achievement
-            );
-        }
-
-        timer++;
-
-        timerText.innerText = timer;
-
-        if(timer === 30){
-
-            const achievement = 
-                document.createElement("li");
-
-            achievement.innerText =
-                "Survived 30 Seconds";
-
-            document.getElementById(
-                "emptyAchievementText"
-            ).style.display = "none";
-
-            achievementList.appendChild(
-                achievement
-            );
-        }
-
-    }, 1000);
+    startCountdown();
 
     gameArea.style.transform = "scale(1.02)";
 
@@ -529,25 +567,7 @@ pauseBtn.addEventListener(
 
         }else{
 
-            gameInterval =
-                setInterval(updateBall, 20);
-
-            timerInterval =
-                setInterval(function(){
-
-                    timer++;
-
-                    timerText.innerText =
-                        timer;
-
-                }, 1000);
-
-            pauseBtn.innerText = "⏸ Pause";
-
-            pauseOverlay.style.display =
-                "none";
-
-            paused = false;
+            startCountdown();
         }
     }
 );
