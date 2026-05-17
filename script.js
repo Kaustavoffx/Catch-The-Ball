@@ -358,54 +358,87 @@ function startCountdown(){
     ).innerHTML = `
 
         <h2 id="countdownText">
-
             3
-
         </h2>
 
     `;
 
     let count = 3;
 
-    const countdownInterval = setInterval(function(){
+    const countdownText =
+        document.getElementById(
+            "countdownText"
+        );
 
-        count--;
+    const countdownInterval =
+        setInterval(function(){
 
-        if(count > 0){
+            count--;
 
-            document.getElementById(
-                "countdownText"
-            ).innerText = count;
+            if(count > 0){
 
-        }else{
+                countdownText.innerText =
+                    count;
 
-            clearInterval(
-                countdownInterval
-            );
+            }else{
 
-            pauseOverlay.style.display =
-                "none";
+                clearInterval(
+                    countdownInterval
+                );
 
-            gameInterval =
-                setInterval(updateBall, 20);
+                pauseOverlay.style.display =
+                    "none";
 
-            timerInterval =
-                setInterval(function(){
+                gameInterval =
+                    setInterval(
+                        updateBall,
+                        20
+                    );
 
-                    timer++;
+                timerInterval =
+                    setInterval(function(){
 
-                    timerText.innerText =
-                        timer;
+                        timer++;
 
-                }, 1000);
+                        timerText.innerText =
+                            timer;
 
-            pauseBtn.innerText =
-                "⏸ Pause";
+                    },1000);
 
-            paused = false;
-        }
+                pauseBtn.innerText =
+                    "⏸ Pause";
 
-    },1000);
+                paused = false;
+
+                document.getElementById(
+                    "pauseContent"
+                ).innerHTML = `
+
+                    <h2>
+                        Game Paused
+                    </h2>
+
+                    <button id="resumeBtn">
+
+                        ▶ Resume Game
+
+                    </button>
+
+                `;
+
+                document.getElementById(
+                    "resumeBtn"
+                ).addEventListener(
+                    "click",
+                    function(){
+
+                        startCountdown();
+
+                    }
+                );
+            }
+
+        },1000);
 }
 
 function startGame(){
@@ -492,7 +525,11 @@ pauseBtn.addEventListener(
     "click",
     function(){
 
-        if(!paused){
+        if(paused){
+
+            startCountdown();
+
+        }else{
 
             clearInterval(gameInterval);
 
@@ -505,10 +542,6 @@ pauseBtn.addEventListener(
                 "flex";
 
             paused = true;
-
-        }else{
-
-            startCountdown();
         }
     }
 );
