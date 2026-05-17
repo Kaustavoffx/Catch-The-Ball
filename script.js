@@ -78,6 +78,27 @@ if(savedPlayer){
     playerName.value = savedPlayer;
 }
 
+const savedTheme = 
+    localStorage.getItem("theme");
+
+if(savedTheme){
+    themeSelect.value= savedTheme;
+
+    if(saved === "light"){
+        document.body.classList.add(
+            "lightMode"
+        );
+    }
+}
+
+const savedDifficulty = 
+    localStorage.getItem("difficulty");
+
+if(savedDifficulty){
+    difficultySelect.value = 
+        savedDifficulty;
+}
+
 document.addEventListener("mousemove", moveBasket);
 
 function moveBasket(event){
@@ -254,6 +275,11 @@ function startGame(){
 
     const difficulty =
         difficultySelect.value;
+
+    localStorage.setItem(
+        "difficulty",
+        difficultySelect.value
+    );
 
     if(difficulty === "easy"){
 
@@ -441,6 +467,11 @@ themeSelect.addEventListener(
     "change",
     function(){
 
+        localStorage.setItem(
+            "theme",
+            themeSelect.value
+        );
+    
         if(themeSelect.value === "light"){
 
             document.body.classList.add(
