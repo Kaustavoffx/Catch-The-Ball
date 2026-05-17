@@ -414,6 +414,19 @@ function startGame(){
 
     timerInterval = setInterval(function(){
 
+        if(timer === 60){
+
+            const achievement =
+                document.createElement("li");
+
+            achievement.innerText =
+                "Survived 60 Seconds";
+
+            achievementList.appendChild(
+                achievement
+            );
+        }
+
         timer++;
 
         timerText.innerText = timer;
@@ -436,20 +449,6 @@ function startGame(){
         }
 
     }, 1000);
-    
-        if(timer === 60){
-
-            const achievement =
-                document.createElement("li");
-
-            achievement.innerText = 
-                "Survived 60 Seconds";
-
-            achievementList.appendChild(
-                achievement
-
-            );
-        }
 
     gameArea.style.transform = "scale(1.02)";
 
@@ -543,7 +542,7 @@ pauseBtn.addEventListener(
 
                 }, 1000);
 
-            pauseBtn.innerText = "Pause";
+            pauseBtn.innerText = "⏸ Pause";
 
             pauseOverlay.style.display =
                 "none";
