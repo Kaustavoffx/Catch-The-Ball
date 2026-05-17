@@ -102,6 +102,7 @@ h1{
     #statsContainer{
         flex-direction:column ;
         align-items:center ;
+        transition:0.3s;
     }
 
     #settingsPanel{
@@ -112,6 +113,9 @@ h1{
         width:90%;
     }
 
+    footer{
+        padding:30px 10px;
+    }
 
 }
 
@@ -391,9 +395,20 @@ button:active{
     font-size:14px; 
 }
 
+@keyframes fadeText{
+    from{
+
+        opacity:0.5;
+    }
+    to{
+        opacity:1;
+    }
+}
+
 .lightMode #statsContainer div{
     background:#cbd5e1;
     color:black;
+    animation:fadeText 2s infinite alternate ;
 }
 
 .lightMode #settingsPanel {
@@ -550,4 +565,16 @@ button:active{
     to{
         opacity:1;
     }
+}
+#statsContainer div:hover{
+    transform:translateY(-4px) ;
+}
+
+achievementList li:hover{
+    transform:scale(1.03) ;
+}
+
+.lightMode #tipsBoard{
+    background:#cbd5e1 ;
+    color:black;
 }
