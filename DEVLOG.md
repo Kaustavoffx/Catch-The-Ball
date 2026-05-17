@@ -155,8 +155,20 @@ Next Goals:
 ## Night session:
 
 Time Spent:
+Around 4.5 hours(debugging+testing)
 
 Completed:
+- fixed recursive countdown bug
+- fixed loading overlay freeze issue
+- restored missing event listeners
+- fixed pause/resume logic
+- improved countdown animation behavior
+- resfined resume gameplay experience
 
 Problems Faced:
+- script execution stopping
+- broken button interactions
+- resume overlay conflicts
+- countdown reset inconsistencies
+- loading state debugging
 
