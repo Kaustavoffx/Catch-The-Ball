@@ -351,10 +351,12 @@ function resetBall(){
 
 function startCountdown(){
 
-    startCountdown();
+    pauseOverlay.style.display=
+        "flex";
 
     document.getElementById(
         "pauseContent"
+        
     ).innerHTML = `
 
         <h2 id="countdownText">
@@ -572,8 +574,7 @@ pauseBtn.addEventListener(
 
         }else{
 
-            pauseOverlay.style.display =
-                "flex";
+            tartCountdown();
         }
     }
 );
