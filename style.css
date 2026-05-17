@@ -5,6 +5,7 @@ body{
     font-family:Arial,Helvetica,sans-serif ;
     color:white;
     text-align:center;
+    transition:0.3s;
 }
 
 h1{
@@ -107,6 +108,7 @@ h1{
 
     #settingsPanel{
         width:90%;
+        transition:0.3s;
     }
     
     #achievementBoard{
