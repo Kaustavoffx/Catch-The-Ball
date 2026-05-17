@@ -167,7 +167,18 @@ function updateBall(){
             combo++;
 
             comboText.innerText = combo;
+            if(combo>bestCombo){
+                bestCombo = combo;
+                bestComboText.innerText =
+                    bestCombo;
+            }
 
+            if(soundSelect.value === "on"){
+                catchSound.play();
+            }
+
+            createParticles();
+            
             scoreText.innerText = score;
 
             scoreText.classList.add("scorePop");
