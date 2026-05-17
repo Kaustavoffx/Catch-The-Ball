@@ -351,12 +351,10 @@ function resetBall(){
 
 function startCountdown(){
 
-    pauseOverlay.style.display=
-        "flex";
+    pauseOverlay.style.display = "flex";
 
     document.getElementById(
         "pauseContent"
-        
     ).innerHTML = `
 
         <h2 id="countdownText">
@@ -369,109 +367,45 @@ function startCountdown(){
 
     let count = 3;
 
-    const countdownInterval =
+    const countdownInterval = setInterval(function(){
 
-        setInterval(function(){
+        count--;
 
-            count--;
+        if(count > 0){
 
-            if(count > 0){
+            document.getElementById(
+                "countdownText"
+            ).innerText = count;
 
-                document.getElementById(
-                    "countdownText"
-                ).innerText = count;
+        }else{
 
-            }else{
+            clearInterval(
+                countdownInterval
+            );
 
-                clearInterval(
-                    countdownInterval
-                );
+            pauseOverlay.style.display =
+                "none";
 
-                pauseOverlay.style.display =
-                    "none";
+            gameInterval =
+                setInterval(updateBall, 20);
 
-                gameInterval =
-                    setInterval(
-                        updateBall,
-                        20
-                    );
+            timerInterval =
+                setInterval(function(){
 
-                timerInterval =
-                    setInterval(function(){
+                    timer++;
 
-                        timer++;
+                    timerText.innerText =
+                        timer;
 
-                        timerText.innerText =
-                            timer;
+                }, 1000);
 
-                        if(timer === 30){
+            pauseBtn.innerText =
+                "⏸ Pause";
 
-                            const achievement =
-                                document.createElement("li");
+            paused = false;
+        }
 
-                            achievement.innerText =
-                                "Survived 30 Seconds";
-
-                            document.getElementById(
-                                "emptyAchievementText"
-                            ).style.display = "none";
-
-                            achievementList.appendChild(
-                                achievement
-                            );
-                        }
-
-                        if(timer === 60){
-
-                            const achievement =
-                                document.createElement("li");
-
-                            achievement.innerText =
-                                "Survived 60 Seconds";
-
-                            achievementList.appendChild(
-                                achievement
-                            );
-                        }
-
-                    }, 1000);
-
-                pauseBtn.innerText =
-                    "⏸ Pause";
-
-                paused = false;
-
-                document.getElementById(
-                    "pauseContent"
-                ).innerHTML = `
-
-                    <h2>
-
-                        Game Paused
-
-                    </h2>
-
-                    <button id="resumeBtn">
-
-                        ▶ Resume Game
-
-                    </button>
-
-                `;
-
-                document.getElementById(
-                    "resumeBtn"
-                ).addEventListener(
-                    "click",
-                    function(){
-
-                        startCountdown();
-
-                    }
-                );
-            }
-
-        }, 1000);
+    },1000);
 }
 
 function startGame(){
@@ -574,7 +508,7 @@ pauseBtn.addEventListener(
 
         }else{
 
-            tartCountdown();
+            startCountdown();
         }
     }
 );
@@ -587,3 +521,121 @@ resumeBtn.addEventListener(
 
     }
 );
+startBtn.addEventListener(
+    "click",
+    startGame
+);
+
+restartBtn.addEventListener(
+    "click",
+    function(){
+
+        gameOverModal.style.display =
+            "none";
+
+        startGame();
+    }
+);
+
+document.addEventListener(
+    "keydown",
+    function(event){
+
+        if(event.key === "ArrowLeft"){
+
+            basketX -= 30;
+        }
+
+        if(event.key === "ArrowRight"){
+
+            basketX += 30;
+        }
+
+        if(basketX < 0){
+
+            basketX = 0;
+        }
+
+        if(basketX > 300){
+
+            basketX = 300;
+        }
+
+        basket.style.left =
+            basketX + "px";
+    }
+);
+
+document.addEventListener(
+    "touchmove",
+    function(event){
+
+        const rect =
+            gameArea.getBoundingClientRect();
+
+        basketX =
+            event.touches[0].clientX -
+            rect.left -
+            50;
+
+        if(basketX < 0){
+
+            basketX = 0;
+        }
+
+        if(basketX > 300){
+
+            basketX = 300;
+        }
+
+        basket.style.left =
+            basketX + "px";
+    }
+);
+
+themeSelect.addEventListener(
+    "change",
+    function(){
+
+        localStorage.setItem(
+            "theme",
+            themeSelect.value
+        );
+
+        if(themeSelect.value === "light"){
+
+            document.body.classList.add(
+                "lightMode"
+            );
+
+        }else{
+
+            document.body.classList.remove(
+                "lightMode"
+            );
+        }
+    }
+);
+
+savePlayerBtn.addEventListener(
+    "click",
+    function(){
+
+        localStorage.setItem(
+            "playerName",
+            playerName.value
+        );
+
+        welcomeText.innerText =
+            "Welcome Back, " +
+            playerName.value;
+    }
+);
+
+setTimeout(function(){
+
+    document.getElementById(
+        "loadingScreen"
+    ).style.display = "none";
+
+}, 2500);
