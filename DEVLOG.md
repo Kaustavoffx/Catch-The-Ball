@@ -54,7 +54,7 @@ Issues faced:
 
 
 --------------------------------------------------------------
-#Day 2 Dev Log
+# Day 2 Dev Log
 
 Date:
 16 May 2026
@@ -115,3 +115,48 @@ Problems Faced:
 - Mobile responsiveness adjustments
 
 --------------------------------------------------------------
+
+# Day 3 Devlog update
+
+Date:
+17 May 2026
+
+Time Spent:
+Around 6 Hours
+
+works Completed:
+- Added sound settings
+- Added loading screen
+- Added Particle effects
+- Added combo achievements
+- Added Best Combo tracker
+- Added gameplay tips section
+- Improved modal animations
+- Improved hover effects
+- Improved responsive Layout
+- Refined spacing and allignments
+- Improved gameplay polish
+
+Problem Faced:
+- Pause Overlay issues 
+- loading screen structure bugs
+- animations naming mismatch
+- particle positioning issues
+- Responsive spacing inconssitencies
+- interval handling during pause/resume
+
+Next Goals:
+- Improved resume countdown system
+- Add better gameplay balancing
+- Add smoother transitions
+- Improve mobile gameplay experience
+- Add advanced achievement tracking
+
+## Night session:
+
+Time Spent:
+
+Completed:
+
+Problems Faced:
+
