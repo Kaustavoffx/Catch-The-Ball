@@ -40,6 +40,22 @@ const comboText =
 const gameArea = 
     document.getElementById("gameArea");
 
+
+const catchSound =
+    new Audio("assets/catch.mp3");
+
+const missSound =
+    new Audio("assets/miss.mp3");
+
+const gameOverSound =
+    new Audio("assets/gameover.mp3");
+
+const soundSelect =
+    document.getElementById("soundSelect");
+
+const bestComboText = 
+    document.getElementById("bestCombo");
+
 let timer = 0;
 
 let timerInterval;
@@ -57,6 +73,7 @@ let score = 0;
 let speed = 4;
 
 let combo = 0;
+let bestCombo = 0;
 
 let gameInterval;
 
@@ -84,7 +101,7 @@ const savedTheme =
 if(savedTheme){
     themeSelect.value= savedTheme;
 
-    if(saved === "light"){
+    if(savedTheme === "light"){
         document.body.classList.add(
             "lightMode"
         );
@@ -204,6 +221,11 @@ function updateBall(){
 
             comboText.innerText = combo;
 
+            if(soundSelect.value === "on"){
+
+                missSound.play();
+            }
+
             document.body.classList.add("shake");
 
             setTimeout(function(){
@@ -217,6 +239,11 @@ function updateBall(){
                 lives = 0;
 
                 gameRunning = false;
+
+                if(soundSelect.value === "on"){
+
+                    gameOverSound.play();
+                }
 
                 clearInterval(gameInterval);
 
@@ -241,6 +268,29 @@ function updateBall(){
         }
 
         resetBall();
+    }
+}
+
+function createParticles (){
+
+    for (let i =0; i<8 ; i++){
+
+        const particle =
+            document.createElement("div");
+
+        particle.classList.add("particle");
+
+        particle.style.left=
+            ballX + "px";
+
+        particle.style.top=
+            ballY + "px";
+
+        gameArea.appendChild(particle);
+
+        setTimeout(function(){
+            particle.remove();
+        }, 600);
     }
 }
 

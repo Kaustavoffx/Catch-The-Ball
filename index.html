@@ -43,6 +43,19 @@
             Difficulty:
         </label>
 
+        <br><br>
+        <label>
+            Sound:
+        </label>
+        <select id ="soundSelect">
+            <option value="on">
+                ON
+            </option>
+            <option value="off">
+                OFF
+            </option>
+        </select>
+
         <select id="difficultySelect">
 
             <option value="easy">
@@ -115,6 +128,12 @@
             Lives: <span id="lives">3</span>
         </div>
 
+        <div id="bestComboBoard">
+
+            Best Combo:
+            <span id="bestCombo">0</span>
+        </div>
+        
     </div>
 
     <div id="gameArea">
@@ -122,6 +141,8 @@
         <div id="basket"></div>
 
         <div id="ball"></div>
+
+        <div id="particles"></div>
 
     </div>
 
