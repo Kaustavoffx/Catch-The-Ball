@@ -40,7 +40,6 @@ const comboText =
 const gameArea = 
     document.getElementById("gameArea");
 
-
 const catchSound =
     new Audio("assets/catch.mp3");
 
@@ -68,6 +67,11 @@ const profileBestText =
 const achievementCount = 
     document.getElementById(
         "achievementCount"
+    );
+
+const playerRank =
+    document.getElementById(
+        "playerRank"
     );
 
 const profileAvatar = document.getElementById("profileAvatar")
@@ -207,6 +211,8 @@ function updateBall(){
         ){
 
             score++;
+            updateRank();
+            
             combo++;
 
             comboText.innerText = combo;
@@ -828,5 +834,24 @@ function addEvent(message){
             eventMessages.lastChild
 
         );
+    }
+}
+
+function updateRank(){
+    if(score >= 100){
+        playerRank.innerText=
+            "Legendary Player";
+    }else if(score >=50){
+        playerRank.innerText=
+            "Pro Catcher";
+    }else if(score >=25){
+        playerRank.innerText=
+            "Combo Hunter";
+    }else if(score >= 10){
+        playerRank.innerText=
+            "Rising Player";
+    }else{
+        playerRank.innerText=
+            "Begginer";
     }
 }
