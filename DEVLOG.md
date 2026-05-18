@@ -1,12 +1,12 @@
 # Day 1 Dev Log
 
-# Date:
+### Date:
 15 May 2026
 
-# Time Spent :
+### Time Spent :
 Around 5 Hours
 
-# works completed:
+### works completed:
 
 - Created game structure
 - Added basket Movement
@@ -19,14 +19,14 @@ Around 5 Hours
 - Added game over modal
 - Improved responsive layout
 
-# Problems Faced:
+### Problems Faced:
 
 - Ball reset bugs
 - Collisions inconsistencies
 - Lives counter going below zero
 - Modal rendering issues
 
-# Next Goals:
+### Next Goals:
 
 - Add touch controls
 - Improve UI animations
@@ -37,10 +37,10 @@ Around 5 Hours
 
 ## Late Night Session
 
-# additional Time:
+### additional Time:
 4 hours (added 1/2 hours for some testing also)
 
-# completed:
+### completed:
 - Added start screen
 - Added timer system
 - Added score animations
@@ -48,7 +48,7 @@ Around 5 Hours
 - added footer section
 - Improved visual effects
 
-# Issues faced:
+### Issues faced:
 - Timer reset bugs
 - animation timing adjustments
 - Layout spacing refinements
@@ -57,13 +57,13 @@ Around 5 Hours
 
 # Day 2 Dev Log
 
-# Date:
+## Date:
 16 May 2026
 
-# Time Spent:
+### Time Spent:
 Around 5 hours
 
-# works completed:
+### works completed:
 - Day 1 Html and css errors are now fixed
 - Added settings panel
 - Added difficulty selector
@@ -72,21 +72,21 @@ Around 5 hours
 - Improved pause interface
 - Improved Ui Polish
 
-# Problems faced
+### Problems faced
 - Footer issue in Html
 - Theme styling inconsistencies
 - localStorage loading issue
 - pause overlay visibility bug
 - Mobile spacing adjustments
 
-# Next Goals
+### Next Goals
 - sound settings
 - Better animations
 - Combo system
 - Particle effects
 - Better achievements tracking
 
-# Additional Progress:
+### Additional Progress:
 -Added combo system
 -Added game feel animations
 -Added game feel animations
@@ -101,7 +101,7 @@ Around 5 hours
 Time Spent :
 around 5 hours (testing included)
 
-# Completed:
+### Completed:
 - Improved animations
 - Added gameplay polish
 - Improved achievement visuals
@@ -109,7 +109,7 @@ around 5 hours (testing included)
 - refined spacing and layout
 - Improved theme Consistency
 
-# Problems Faced:
+### Problems Faced:
 - Animations timing issues
 - Theme contrast inconsistencies
 - Layout spacing bugs
@@ -119,13 +119,13 @@ around 5 hours (testing included)
 
 # Day 3 Devlog update
 
-# Date:
+### Date:
 17 May 2026
 
-# Time Spent:
+### Time Spent:
 Around 6 Hours
 
-# works Completed:
+### works Completed:
 - Added sound settings
 - Added loading screen
 - Added Particle effects
@@ -138,7 +138,7 @@ Around 6 Hours
 - Refined spacing and allignments
 - Improved gameplay polish
 
-# Problem Faced:
+### Problem Faced:
 - Pause Overlay issues 
 - loading screen structure bugs
 - animations naming mismatch
@@ -146,7 +146,7 @@ Around 6 Hours
 - Responsive spacing inconssitencies
 - interval handling during pause/resume
 
-# Next Goals:
+### Next Goals:
 - Improved resume countdown system
 - Add better gameplay balancing
 - Add smoother transitions
@@ -157,10 +157,10 @@ Around 6 Hours
 
 ## Night session:
 
-# Time Spent:
+### Time Spent:
 Around 4.5 hours(debugging+testing)
 
-# Completed:
+### Completed:
 - fixed recursive countdown bug
 - fixed loading overlay freeze issue
 - restored missing event listeners
@@ -168,7 +168,7 @@ Around 4.5 hours(debugging+testing)
 - improved countdown animation behavior
 - resfined resume gameplay experience
 
-# Problems Faced:
+### Problems Faced:
 - script execution stopping
 - broken button interactions
 - resume overlay conflicts
@@ -179,13 +179,13 @@ Around 4.5 hours(debugging+testing)
 
 # Day 4 Devlog update
 
-# Date:
+### Date:
 18 May 2026
 
-# Time Spent:
+### Time Spent:
 Around 4.5 Hours
 
-# Works Completed:
+### Works Completed:
 - Added advanced achievement system
 - Added achievement counter
 - added streak tracker
@@ -201,7 +201,7 @@ Around 4.5 Hours
 - refacoting the repeated achievement logic
 - improved profile card and stats layout
 
-# Problems Faced:
+### Problems Faced:
 - Resume countdown looping issue
 - loading screen visibility bug
 - achievement duplication issue
@@ -210,7 +210,7 @@ Around 4.5 Hours
 - weak visual 
 - Ui feels strched when testing
 
-# Next Goal:
+### Next Goal:
 - Full Ui redesign
 - Better visual feels adding
 - styling changes needed
@@ -221,8 +221,8 @@ Around 4.5 Hours
 
 ## Night session:
 
-# Time Spent:
+### Time Spent:
 
-# Completed:
+### Completed:
 
-# Problems Faced:
+### Problems Faced:
