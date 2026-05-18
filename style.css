@@ -618,3 +618,61 @@ button:active{
         opacity:1 ;
     }
 }
+
+#profileCard{
+
+    width: 380px;
+    margin:30px auto;
+    background:#1e293b ;
+    border-radius:20px ;
+    padding: 30px;
+
+    display: flex;
+    gap: 25px;
+
+    align-items:center;
+    box-shadow:0 0 30px rgba(255,255,255,0.08) ;
+
+    border:1px solid rgba(255,255,255,0.1);
+
+}
+
+#profileAvatar{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    background:#22c55e;
+
+    display:flex;
+    justify-content:center;
+    align-items:center ;
+
+    font-size:  42px;
+    font-weight: bold;
+
+    color:white;
+    box-shadow:0 0 25px rgba(34,197,94,0.3) ;
+}
+
+#profileDetails{
+
+    flex:1;
+    text-align:left ;
+}
+
+#playerStatsMini{
+
+    margin-top:18px ;
+    display:flex ;
+    flex-direction:column ;
+    gap:10px;
+}
+
+.lightMode #profileCard{
+    background:#cbd5e1 ;
+    color:black;
+}
+
+.lightMode .miniStat{
+    background:white ;
+}
