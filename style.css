@@ -3,12 +3,16 @@ body{
     padding:0 ;
     background: 
     linear-gradient(
-        135 deg,
+        135deg,
         #0f172a,
         #111827
     );
     color:white;
-    font-family: 'Orbitron',sa;
+    font-family: 'Orbitron',sans-serif;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    min-height:100vh;
 }
 
 h1{
@@ -18,8 +22,8 @@ h1{
 }
 
 #gameArea{
-    width:400px;
-    height:600px;
+    width:460px;
+    height:640px;
     background:#222;
 
     background-image: 
@@ -259,7 +263,7 @@ footer{
 }
 
 #settingsPanel{
-    width:320px ;
+    width:420px;
     margin:25px auto ;
     padding:24px ;
     background:#1e293b ;
@@ -313,7 +317,7 @@ footer{
 }
 
 #achievementBoard{
-    width:320px;
+    width:360px;
     margin:30px auto;
     padding:24px;
     background: #1e293b;
@@ -564,7 +568,7 @@ button:active{
 
 #tipsBoard{
 
-    width:320px;
+    width:420px;
     margin:30px auto;
     padding:24px;
     background:#1e293b ;
@@ -749,7 +753,7 @@ button:active{
 }
 
 #eventFeed{
-    width:380px;
+    width:420px;
     margin:30px auto;
     background:#1e293b ;
     padding:25px ;
