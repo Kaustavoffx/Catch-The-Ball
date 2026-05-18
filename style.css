@@ -719,3 +719,16 @@ button:active{
     text-align:left ;
     animation:fadeIn 0.3s ease ;
 }
+
+.flashEffect{
+    animation:flashScreen 0.4s;
+}
+
+@keyframes flashScreen{
+    0%{
+        background:white;
+    }
+    100%{
+        background:transparent ;
+    }
+}

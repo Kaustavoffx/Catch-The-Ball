@@ -329,6 +329,20 @@ function updateBall(){
 
                 highScoreText.innerText =
                     highScore;
+                
+                document.body.classList.add(
+                    "flashEffect"
+                );
+
+                setTimeout(function(){
+
+                    document.body.classList.remove(
+
+                        "flashEffect"
+
+                    );
+
+                },400);
             }
 
             if(score % 5 === 0){
@@ -458,7 +472,7 @@ function resetBall(){
 
     ball.style.boxShadow =
         "0 0 20px" + randomColor;
-        
+
 }
 
 function startCountdown(){
