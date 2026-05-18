@@ -832,25 +832,76 @@ themeSelect.addEventListener(
 );
 
 savePlayerBtn.addEventListener(
+
     "click",
+
     function(){
 
         localStorage.setItem(
+
             "playerName",
+
             playerName.value
+
         );
 
         welcomeText.innerText =
+
             "Welcome Back, " +
+
             playerName.value;
 
-        profileAvatar.innerText = 
-            playerName.value.charAt(0).toUpperCase();
+        profileAvatar.innerText =
+            playerName.value
+            .charAt(0)
+            .toUpperCase();
+        const colors=[
+            "#00f5ff",
+            "#7c3aed",
+            "#00ff9d",
+            "#f43f5e",
+            "#facc15"
+        ];
+
+        const randomColor=
+            colors[
+                Math.floor(
+                    Math.random()* colors.length
+                )
+            ];
+        profileAvatar.style.background=
+            randomColor;
     }
 );
 
 if(savedPlayer){
-    profileAvatar.innerText=savedPlayer.charAt(0).toUpperCase();
+
+    profileAvatar.innerText =
+
+        savedPlayer
+        .charAt(0)
+        .toUpperCase();
+
+    const colors = [
+
+        "#00f5ff",
+        "#7c3aed",
+        "#00ff9d",
+        "#f43f5e",
+        "#facc15"
+    ];
+
+    const randomColor =
+
+        colors[
+            Math.floor(
+                Math.random() * colors.length
+            )
+        ];
+
+    profileAvatar.style.background =
+
+        randomColor;
 }
 
 setTimeout(function(){
