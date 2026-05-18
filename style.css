@@ -50,7 +50,12 @@ h1{
 #basket{
     width:100px;
     height:20px;
-    background:#22c55e;
+    background:
+    linear-gradient(
+    90deg,
+    #00ff9d,
+    #00f5ff
+    );
     box-shadow:0 0 20px #22c55e;
     position:absolute;
     bottom:20px;
@@ -283,6 +288,8 @@ footer{
 .lightMode #gameArea{
     background: #e2e8f0;
     border-color:black;
+    box-shadow:
+    0 0 40px rgba(0,245,255,0.2);
 }
 
 .lightMode #modalContent{
