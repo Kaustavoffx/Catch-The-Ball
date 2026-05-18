@@ -433,6 +433,32 @@ function resetBall(){
     ball.style.top = ballY + "px";
 
     ball.style.left = ballX + "px";
+
+    const colors = [
+        "#ef4444",
+        "#3b82f6",
+        "#22c55e",
+        "#facc15",
+        "#a855f7"
+    ];
+
+    const randomColor =
+
+        colors[
+
+            Math.floor(
+
+                Math.random() *
+                colors.length
+            )
+        ];
+
+    ball.style.background = 
+        randomColor;
+
+    ball.style.boxShadow =
+        "0 0 20px" + randomColor;
+        
 }
 
 function startCountdown(){
