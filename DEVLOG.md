@@ -35,7 +35,7 @@ Around 5 Hours
 
 --------------------------------
 
-## Night Session (Day 4):
+## Night Session (Day 1):
 
 ### additional Time:
 4 hours (added 1/2 hours for some testing also)
