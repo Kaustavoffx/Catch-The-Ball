@@ -69,6 +69,8 @@ const achievementCount =
     document.getElementById(
         "achievementCount"
     );
+
+const profileAvatar = document.getElementById("profileAvatar")
 let unlockedAchievements = 0;
 
 function addAchievement(text){
@@ -748,8 +750,15 @@ savePlayerBtn.addEventListener(
         welcomeText.innerText =
             "Welcome Back, " +
             playerName.value;
+
+        profileAvatar.innerText = 
+            playerName.value.charAt(0).toUpperCase();
     }
 );
+
+if(savedPlayer){
+    profileAvatar.innerText=savedPlayer.charAt(0).toUpperCase();
+}
 
 setTimeout(function(){
 
