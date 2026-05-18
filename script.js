@@ -389,6 +389,8 @@ function startCountdown(){
                 pauseOverlay.style.display =
                     "none";
 
+                gameRunning = true;
+                
                 gameInterval =
                     setInterval(
                         updateBall,
