@@ -73,6 +73,11 @@ const playerRank =
     document.getElementById(
         "playerRank"
     );
+const streakText=
+    document.getElementById(
+        "streak"
+    );
+let streak = 0;
 
 const profileAvatar = document.getElementById("profileAvatar")
 let unlockedAchievements = 0;
@@ -212,7 +217,12 @@ function updateBall(){
 
             score++;
             updateRank();
-            
+
+            streak++;
+
+            streakText.innerText =
+                streak;
+
             combo++;
 
             comboText.innerText = combo;
@@ -331,6 +341,10 @@ function updateBall(){
             lives--;
 
             combo = 0;
+            streak = 0;
+
+            streakText.innerText =
+                streak;
 
             comboText.innerText = combo;
 
