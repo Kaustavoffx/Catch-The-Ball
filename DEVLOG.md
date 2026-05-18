@@ -35,7 +35,7 @@ Around 5 Hours
 
 --------------------------------
 
-## Late Night Session
+## Night Session (Day 4):
 
 ### additional Time:
 4 hours (added 1/2 hours for some testing also)
@@ -87,16 +87,16 @@ Around 5 hours
 - Better achievements tracking
 
 ### Additional Progress:
--Added combo system
--Added game feel animations
--Added game feel animations
--Improved Settings styling
--Added Visual polish effects
--Improved scoreboard layout
+- Added combo system
+- Added game feel animations
+- Added game feel animations
+- Improved Settings styling
+- Added Visual polish effects
+- Improved scoreboard layout
 
 --------------------------------
 
-## Night Session
+## Night Session (Day 2) 
 
 Time Spent :
 around 5 hours (testing included)
@@ -155,7 +155,7 @@ Around 6 Hours
 
 --------------------------------
 
-## Night session:
+## Night session (Day 3) :
 
 ### Time Spent:
 Around 4.5 hours(debugging+testing)
@@ -219,7 +219,7 @@ Around 4.5 Hours
 
 --------------------------------
 
-## Night session:
+## Night session (Day 4) :
 
 ### Time Spent:
 
