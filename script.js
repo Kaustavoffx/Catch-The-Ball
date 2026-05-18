@@ -65,6 +65,32 @@ const gamesPlayedText =
 const profileBestText = 
     document.getElementById("profileBest");
 
+const achievementCount = 
+    document.getElementById(
+        "achievementCount"
+    );
+let unlockedAchievements = 0;
+
+function addAchievement(text){
+    const achievement = 
+        document.createElement("li");
+
+    achievement.innerText= text;
+
+    document.getElementById(
+        "emptyAchievementText"
+    ).style.display="none";
+
+    achievementList.appendChild(
+        achievement
+    );
+
+    unlockedAchievements++;
+
+    achievementCount.innerText = 
+        unlockedAchievements;
+}
+
 let timer = 0;
 
 let timerInterval;
@@ -88,17 +114,17 @@ let gameInterval;
 
 let gameRunning = false;
 
-let gamesPlayed =
-    localStorage.getItem("gamesPlayed") || 0;
-
-gamesPlayedText.innerText=gamesPlayed;
-
-profileBestText.innerText = highScore;
-
 let highScore =
     localStorage.getItem("highScore") || 0;
 
 highScoreText.innerText = highScore;
+
+let gamesPlayed =
+    localStorage.getItem("gamesPlayed") || 0;
+
+gamesPlayedText.innerText = gamesPlayed;
+
+profileBestText.innerText = highScore;
 
 const savedPlayer =
     localStorage.getItem("playerName");
@@ -186,30 +212,22 @@ function updateBall(){
 
             if(combo === 5){
 
-                const achievement=
-                    document.createElement("li");
-
-                achievement.innerText =
-                    "Combo Master 5";
-
-                document.getElementById(
-                    "emptyAchievementText"
-                ).style.display = "none";
-
-                achievementList.appendChild(
-                    achievement
+                addAchievement(
+                    "Combo Master 5"
                 );
             }
 
             if (combo === 10){
-                const achievement = 
-                    document.createElement("li");
+                
+                addAchievement(
+                    "Combo Master 10"
+                );
+            }
 
-                achievement.innerText =
-                    "Combo Master 10";
-
-                achievementList.appendChild(
-                    achievement
+            if (combo === 15){
+                
+                addAchievement(
+                    "Combo Master 10"
                 );
             }
 
@@ -237,20 +255,35 @@ function updateBall(){
 
             if(score === 10){
 
-                const achievement =
-                    document.createElement("li");
-
-                achievement.innerText =
-                    "Scored 10 Points";
-                    
-                document.getElementById(
-                    "emptyAchievementText"
-                ).style.display = "none";
-
-                achievementList.appendChild(
-                    achievement
+                addAchievement(
+                    "Scored 10 Points"
                 );
             }
+            if(score === 20){
+                
+                addAchievement(
+                    "Combo Master 10"
+                );
+            }
+            if(score === 25){
+                
+                addAchievement(
+                    "Quarter Century Score"
+                );
+            }
+            if(score === 50){
+                
+                addAchievement(
+                    "Half Century Score"
+                );
+            }
+            if(score === 100){
+                
+                addAchievement(
+                    "Legendary Catcher"
+                );
+            }
+
 
             if(score > highScore){
 
@@ -418,6 +451,34 @@ function startCountdown(){
                         timerText.innerText =
                             timer;
 
+                        if(timer === 30){
+
+                            addAchievement(
+                                "Survived 30 Seconds"
+                            );
+                        }
+
+                        if(timer === 60){
+
+                            addAchievement(
+                                "Survived 60 Seconds"
+                            );
+                        }
+
+                        if(timer === 90){
+
+                            addAchievement(
+                                "Ultimate Survivor"
+                            );
+                        }
+
+                        if(timer === 120){
+
+                            addAchievement(
+                                "2 Minute Master"
+                            );
+                        }
+
                     },1000);
 
                 pauseBtn.innerText =
@@ -507,6 +568,10 @@ function startGame(){
         speed = 6;
 
         lives = 2;
+
+        addAchievement(
+            "Hard Mode Challenger"
+        );
     }
 
     timer = 0;
