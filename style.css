@@ -1,17 +1,14 @@
 body{
     margin:0;
-    padding:0;
-    background:linear-gradient(to bottom, #0f172a, #111827);
-    font-family:Arial,Helvetica,sans-serif ;
-    color:white;
-    text-align:center;
-    transition:0.3s;
-    background:
-    radial-gradient(
-        circle at top,
-        #1e293b,
-        #030617
+    padding:0 ;
+    background: 
+    linear-gradient(
+        135 deg,
+        #0f172a,
+        #111827
     );
+    color:white;
+    font-family: 'Orbitron',sans-serif;
 }
 
 h1{
