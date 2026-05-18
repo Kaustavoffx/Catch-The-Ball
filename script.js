@@ -59,6 +59,12 @@ const bestComboText =
 const resumeBtn = 
     document.getElementById("resumeBtn");
 
+const gamesPlayedText = 
+    document.getElementById("gamesPlayed");
+
+const profileBestText = 
+    document.getElementById("profileBest");
+
 let timer = 0;
 
 let timerInterval;
@@ -81,6 +87,13 @@ let bestCombo = 0;
 let gameInterval;
 
 let gameRunning = false;
+
+let gamesPlayed =
+    localStorage.getItem("gamesPlayed") || 0;
+
+gamesPlayedText.innerText=gamesPlayed;
+
+profileBestText.innerText = highScore;
 
 let highScore =
     localStorage.getItem("highScore") || 0;
@@ -444,6 +457,12 @@ function startCountdown(){
 }
 
 function startGame(){
+
+    gamesPlayed++;
+
+    localStorage.setItem("gamesPlayed",gamesPlayed)
+
+    gamesPlayedText.innerText=gamesPlayed;
 
     gameRunning = true;
 
