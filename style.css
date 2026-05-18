@@ -692,3 +692,30 @@ button:active{
     font-size:  14px; 
 
 }
+
+#eventFeed{
+    width:380px;
+    margin:30px auto;
+    background:#1e293b ;
+    padding:25px ;
+    border-radius:16px ;
+    box-shadow: 0 0 20px rgba(255,255,255,0.08);
+
+}
+
+#eventMessages{
+    margin-top:20px ;
+    display:flex ;
+    flex-direction:column ;
+    gap:10px;
+    max-height:250px ;
+    overflow-x:auto ;
+}
+
+.eventItem{
+    background:#0f172a ;
+    padding:12px;
+    border-radius:10px ;
+    text-align:left ;
+    animation:fadeIn 0.3s ease ;
+}

@@ -207,7 +207,6 @@ function updateBall(){
         ){
 
             score++;
-
             combo++;
 
             comboText.innerText = combo;
@@ -217,6 +216,11 @@ function updateBall(){
                 addAchievement(
                     "Combo Master 5"
                 );
+
+                addEvent(
+                    "Combo x5 Reached"
+                );
+
             }
 
             if (combo === 10){
@@ -224,12 +228,19 @@ function updateBall(){
                 addAchievement(
                     "Combo Master 10"
                 );
+                addEvent(
+                    "Combo x10 Dominating"
+                );
             }
+
 
             if (combo === 15){
                 
                 addAchievement(
                     "Combo Master 10"
+                );
+                addEvent(
+                    "Combo x15 Dominating"
                 );
             }
 
@@ -289,6 +300,10 @@ function updateBall(){
 
             if(score > highScore){
 
+                addEvent(
+                    "New High Score Achieved"
+                );
+
                 highScore = score;
 
                 localStorage.setItem(
@@ -327,6 +342,9 @@ function updateBall(){
             }, 300);
 
             if(lives <= 0){
+                addEvent(
+                    "Game Over"
+                );
 
                 lives = 0;
 
@@ -400,6 +418,10 @@ function resetBall(){
 function startCountdown(){
 
     pauseOverlay.style.display = "flex";
+
+    addEvent(
+        "Game Resumed"
+    );
 
     document.getElementById(
         "pauseContent"
@@ -523,6 +545,10 @@ function startGame(){
 
     gamesPlayed++;
 
+    addEvent(
+        "New Game Session Started"
+    );
+
     localStorage.setItem("gamesPlayed",gamesPlayed)
 
     gamesPlayedText.innerText=gamesPlayed;
@@ -574,6 +600,9 @@ function startGame(){
         addAchievement(
             "Hard Mode Challenger"
         );
+        addEvent(
+            "Hard Mode Activated"
+        );
     }
 
     timer = 0;
@@ -622,6 +651,10 @@ pauseBtn.addEventListener(
             clearInterval(gameInterval);
 
             clearInterval(timerInterval);
+
+            addEvent(
+                "Game Paused"
+            );
 
             pauseBtn.innerText =
                 "▶ Resume";
@@ -767,3 +800,33 @@ setTimeout(function(){
     ).style.display = "none";
 
 }, 2500);
+
+const eventMessages =
+    document.getElementById(
+        "eventMessages"
+    );
+
+function addEvent(message){
+
+    const event = 
+        document.createElement("div");
+
+    event.classList.add(
+
+        "eventItem"
+
+    );
+
+    event.innerText = message;
+
+    eventMessages.prepend(event);
+
+    if(eventMessages.children.length > 10){
+
+        eventMessages.removeChild(
+
+            eventMessages.lastChild
+
+        );
+    }
+}
