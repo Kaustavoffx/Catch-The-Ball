@@ -1,12 +1,12 @@
 # Day 1 Dev Log
 
-Date:
+# Date:
 15 May 2026
 
-Time Spent :
+# Time Spent :
 Around 5 Hours
 
-works completed:
+# works completed:
 
 - Created game structure
 - Added basket Movement
@@ -19,27 +19,28 @@ works completed:
 - Added game over modal
 - Improved responsive layout
 
-Problems Faced:
+# Problems Faced:
 
 - Ball reset bugs
 - Collisions inconsistencies
 - Lives counter going below zero
 - Modal rendering issues
 
-Next Goals:
+# Next Goals:
 
 - Add touch controls
 - Improve UI animations
 - Add sound effects
 - create better game balancing
 
+--------------------------------
 
 ## Late Night Session
 
-additional Time:
+# additional Time:
 4 hours (added 1/2 hours for some testing also)
 
-completed:
+# completed:
 - Added start screen
 - Added timer system
 - Added score animations
@@ -47,22 +48,22 @@ completed:
 - added footer section
 - Improved visual effects
 
-Issues faced:
+# Issues faced:
 - Timer reset bugs
 - animation timing adjustments
 - Layout spacing refinements
 
-
 --------------------------------------------------------------
+
 # Day 2 Dev Log
 
-Date:
+# Date:
 16 May 2026
 
-Time Spent:
+# Time Spent:
 Around 5 hours
 
-works completed:
+# works completed:
 - Day 1 Html and css errors are now fixed
 - Added settings panel
 - Added difficulty selector
@@ -71,23 +72,21 @@ works completed:
 - Improved pause interface
 - Improved Ui Polish
 
-
-Problems faced
+# Problems faced
 - Footer issue in Html
 - Theme styling inconsistencies
 - localStorage loading issue
 - pause overlay visibility bug
 - Mobile spacing adjustments
 
-
-Next Goals
+# Next Goals
 - sound settings
 - Better animations
 - Combo system
 - Particle effects
 - Better achievements tracking
 
-Additional Progress:
+# Additional Progress:
 -Added combo system
 -Added game feel animations
 -Added game feel animations
@@ -95,12 +94,14 @@ Additional Progress:
 -Added Visual polish effects
 -Improved scoreboard layout
 
+--------------------------------
+
 ## Night Session
 
 Time Spent :
 around 5 hours (testing included)
 
-Completed:
+# Completed:
 - Improved animations
 - Added gameplay polish
 - Improved achievement visuals
@@ -108,7 +109,7 @@ Completed:
 - refined spacing and layout
 - Improved theme Consistency
 
-Problems Faced:
+# Problems Faced:
 - Animations timing issues
 - Theme contrast inconsistencies
 - Layout spacing bugs
@@ -118,13 +119,13 @@ Problems Faced:
 
 # Day 3 Devlog update
 
-Date:
+# Date:
 17 May 2026
 
-Time Spent:
+# Time Spent:
 Around 6 Hours
 
-works Completed:
+# works Completed:
 - Added sound settings
 - Added loading screen
 - Added Particle effects
@@ -137,7 +138,7 @@ works Completed:
 - Refined spacing and allignments
 - Improved gameplay polish
 
-Problem Faced:
+# Problem Faced:
 - Pause Overlay issues 
 - loading screen structure bugs
 - animations naming mismatch
@@ -145,19 +146,21 @@ Problem Faced:
 - Responsive spacing inconssitencies
 - interval handling during pause/resume
 
-Next Goals:
+# Next Goals:
 - Improved resume countdown system
 - Add better gameplay balancing
 - Add smoother transitions
 - Improve mobile gameplay experience
 - Add advanced achievement tracking
 
+--------------------------------
+
 ## Night session:
 
-Time Spent:
+# Time Spent:
 Around 4.5 hours(debugging+testing)
 
-Completed:
+# Completed:
 - fixed recursive countdown bug
 - fixed loading overlay freeze issue
 - restored missing event listeners
@@ -165,10 +168,61 @@ Completed:
 - improved countdown animation behavior
 - resfined resume gameplay experience
 
-Problems Faced:
+# Problems Faced:
 - script execution stopping
 - broken button interactions
 - resume overlay conflicts
 - countdown reset inconsistencies
 - loading state debugging
 
+--------------------------------------------------------------
+
+# Day 4 Devlog update
+
+# Date:
+18 May 2026
+
+# Time Spent:
+Around 4.5 Hours
+
+# Works Completed:
+- Added advanced achievement system
+- Added achievement counter
+- added streak tracker
+- added live event feed
+- added profile stats section
+- added player ranking system
+- added games played tracker
+- improved pause and resume floe
+- improved countdown system
+- added gameplay milestone achievements
+- added random ball colors
+- improved gameplay feedback visuals
+- refacoting the repeated achievement logic
+- improved profile card and stats layout
+
+# Problems Faced:
+- Resume countdown looping issue
+- loading screen visibility bug
+- achievement duplication issue
+- event feed rendering bugs
+- layout spacing inconsistencies
+- weak visual 
+- Ui feels strched when testing
+
+# Next Goal:
+- Full Ui redesign
+- Better visual feels adding
+- styling changes needed
+- cleaner and smoother response
+- spme more festures gradually adding
+
+--------------------------------
+
+## Night session:
+
+# Time Spent:
+
+# Completed:
+
+# Problems Faced:
