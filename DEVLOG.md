@@ -222,7 +222,25 @@ Around 4.5 Hours
 ## Night session (Day 4) :
 
 ### Time Spent:
+Around 2 hours
 
 ### Completed:
+-Redesigned overall UI layout
+- Added side-by-side botom sections
+- Improved neon color visual
+- Added glassy effects
+- gamer style typography
+- game area glow visual 
+- improved button styling and hover effects
+- added dynamic profile avatar colors
+- improved visual and spacing in layouts
+- refined gameplay presentation
 
 ### Problems Faced:
+- Bottom section alignment issue
+- card spacing inconsistencies
+- theme balancing
+- dark mode light mode visual separation
+- responsive design in mobile
+
+--------------------------------------------------------------
