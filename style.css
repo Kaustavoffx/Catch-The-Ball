@@ -4,8 +4,8 @@ body{
     background: 
     linear-gradient(
         135deg,
-        #0f172a,
-        #111827
+        #000000,
+        #38025c
     );
     color:white;
     font-family: 'Orbitron',sans-serif;
@@ -864,4 +864,34 @@ button:active{
     gap: 30px;
     flex-wrap:wrap ;
     margin-top:40px ;
+}
+
+#gameArea::before{
+    content:"";
+
+    position: absolute;
+
+    width:200%;
+    height:200%;
+
+    background:
+    radial-gradient(
+        rgba(111, 1, 255, 0.171),
+        transparent 60%
+    );
+
+    animation:
+    rotateGlow 10s linear infinite;
+
+    top:-50%;
+    left:-50% ;
+}
+
+@keyframes rotateGlow{
+    from{
+        transform:rotate(0deg) ;
+    }
+    to{
+        transform:rotate(360deg) ;
+    }
 }
