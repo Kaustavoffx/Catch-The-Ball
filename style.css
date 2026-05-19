@@ -1,3 +1,35 @@
+/*=====================
+  Common glass card
+=====================*/
+
+.glassCard{
+    background:
+    rgba(30,41,59,0.65);
+
+    backdrop-filter:  
+    blur(18px);
+
+    border:
+    1px solid rgba(255,255,255,0.08);
+
+    border-radius: 24px;
+
+    box-shadow: 
+    0 0 25px rgba(0,0,0,0.25);
+}
+
+
+/*======================
+  Common Button style
+======================*/
+
+.gameButton{
+    border:none;
+    border-radius:14px ;
+    cursor:pointer;
+    transition:0.3s ;
+}
+
 body{
     margin:0;
     padding:0 ;
@@ -102,11 +134,8 @@ h1{
 #pauseBtn{
     padding:12px 24px;
     margin-left:10px;
-    border:none;
     background:rgb(119, 0, 255);
     font-size:18px;
-    border-radius:8px;
-    cursor:pointer;
     font-weight:bold;
     letter-spacing:1px;
 }
@@ -173,10 +202,7 @@ h1{
 #restartBtn{
     padding: 10px 20px;
     margin-top:15px;
-    border:none;
     background:#22c55e;
-    cursor:pointer;
-    border-radius:8px;
     font-weight:bold;
     letter-spacing:1px;
 }
@@ -290,8 +316,6 @@ footer{
     width:420px;
     margin:25px auto ;
     padding:24px ;
-    background:#1e293b ;
-    border-radius:16px ;
 }
 
 #settingsPanel h3{
@@ -371,18 +395,9 @@ footer{
 
 #savePlayerBtn{
     padding:10px 16px;
-    border:none;
-    border-radius:8px;
-    cursor:pointer;
     margin-left:10px ;
     font-weight:bold;
     letter-spacing:1px;
-}
-
-#settingsPanel{
-
-    box-shadow:0 0 20px rgba(255,255,255,0.08);
-    border:1px solid rgba(255,255,255,0.1);
 }
 
 #settingsPanel select{
@@ -591,13 +606,9 @@ button:active{
 }
 
 #tipsBoard{
-
     width:420px;
     margin:30px auto;
     padding:24px;
-    background:#1e293b ;
-    border-radius:16px ;
-    box-shadow:0 0 20px rgba(255,255,255,0.08) ;
 }
 
 #tipsBoard ul{
@@ -672,18 +683,13 @@ button:active{
 }
 
 #resumeBtn{
-
     padding:14px 24px ;
-    border:none;
-    border-radius:10px ;
     background:#22c55e ;
     color:white;
     font-size:18px ;
-    cursor:pointer ;
     box-shadow:0 0 20px rgba(34,197,94,0.3);
     font-weight:bold;
     letter-spacing:1px;
-
 }
 
 #countdownText{
@@ -703,21 +709,12 @@ button:active{
 }
 
 #profileCard{
-
     width: 380px;
     margin:30px auto;
-    background:#1e293b ;
-    border-radius:20px ;
     padding: 30px;
-
     display: flex;
     gap: 25px;
-
     align-items:center;
-    box-shadow:0 0 30px rgba(255,255,255,0.08) ;
-
-    border:1px solid rgba(255,255,255,0.1);
-
 }
 
 #profileAvatar{
@@ -779,12 +776,8 @@ button:active{
 #eventFeed{
     width:420px;
     margin:30px auto;
-    background:#1e293b ;
     padding:25px ;
-    border-radius:16px ;
-    box-shadow: 0 0 20px rgba(255,255,255,0.08);
     min-height:120px; ;
-
 }
 
 #eventMessages{
@@ -830,9 +823,6 @@ button:active{
 }
 
 #playerSection,
-#settingsPanel,
-#achievementBoard,
-#tipsBoard,
 #eventBoard{
     background:
     rgba(30,41,59,0.65);
