@@ -783,7 +783,7 @@ button:active{
     padding:25px ;
     border-radius:16px ;
     box-shadow: 0 0 20px rgba(255,255,255,0.08);
-    min-height: height 120px; ;
+    min-height:120px; ;
 
 }
 
@@ -921,4 +921,30 @@ button:active{
     transform:translateX(400px) ;
     transition:0.5s ;
     z-index:3000 ;
+}
+
+.eventItem{
+    transition:0.3s ;
+}
+
+.eventItem::hover{
+    transform:translateX(6px) ;
+
+    border-left:
+    4px solid #00f5ff ;
+}
+
+#profileCard:hover,
+#settingsPanel:hover,
+#achievementBoard:hover,
+#tipsBoard:hover,
+#eventFeed:hover{
+
+    transform:
+    translateY(-6px) ;
+
+    transition:0.3s ;
+
+    box-shadow:
+    0 0 35px rgba(0,245,255,0.12);
 }

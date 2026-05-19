@@ -83,7 +83,6 @@ const profileAvatar = document.getElementById("profileAvatar")
 let unlockedAchievements = 0;
 
 function addAchievement(text){
-
     const achievement = 
         document.createElement("li");
 
@@ -101,8 +100,6 @@ function addAchievement(text){
 
     achievementCount.innerText = 
         unlockedAchievements;
-
-    showAchievementPopup(text);
 }
 
 let timer = 0;
@@ -523,6 +520,9 @@ function startCountdown(){
                     "none";
 
                 gameRunning = true;
+                
+                clearInterval(gameInterval);
+                clearInterval(timerInterval);
                 
                 gameInterval =
                     setInterval(
@@ -962,23 +962,4 @@ function updateRank(){
         playerRank.innerText=
             "Begginer";
     }
-}
-
-const achievementPopup = document.getElementById("achievementPopup");
-
-function showAchievementPopup(text){
-    achievementPopup,innerText=
-        "🏆" + text;
-
-    achievementPopup.style.transform=
-        "translateX(0)";
-
-    setTimeout(function(){
-
-        achievementPopup.style.transform =
-
-            "translateX(400px)";
-
-    },2500);
-
 }
