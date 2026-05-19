@@ -895,3 +895,30 @@ button:active{
         transform:rotate(360deg) ;
     }
 }
+
+#achievementPopup{
+    position:fixed ;
+
+    top: 30px;
+    right:30px ;
+
+    background:
+    rgba(15,23,42,0.9);
+
+    padding:18px 24px ;
+
+    border-radius:16px ;
+
+    border:
+    1px solid rgba(255,255,255,0.08);
+
+    color:white;
+
+    font-size:14px;
+
+    backdrop-filter:blur(16px) ;
+
+    transform:translateX(400px) ;
+    transition:0.5s ;
+    z-index:3000 ;
+}
