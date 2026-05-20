@@ -33,7 +33,7 @@ Around 5 Hours
 - Add sound effects
 - create better game balancing
 
---------------------------------
+----------------------------------------------------------------
 
 ## Night Session (Day 1):
 
@@ -53,7 +53,7 @@ Around 5 Hours
 - animation timing adjustments
 - Layout spacing refinements
 
---------------------------------------------------------------
+----------------------------------------------------------------------------------------------
 
 # Day 2 Dev Log
 
@@ -94,7 +94,7 @@ Around 5 hours
 - Added Visual polish effects
 - Improved scoreboard layout
 
---------------------------------
+----------------------------------------------------------------
 
 ## Night Session (Day 2) 
 
@@ -115,7 +115,7 @@ around 5 hours (testing included)
 - Layout spacing bugs
 - Mobile responsiveness adjustments
 
---------------------------------------------------------------
+----------------------------------------------------------------------------------------------
 
 # Day 3 Devlog update
 
@@ -153,7 +153,7 @@ Around 6 Hours
 - Improve mobile gameplay experience
 - Add advanced achievement tracking
 
---------------------------------
+----------------------------------------------------------------
 
 ## Night session (Day 3) :
 
@@ -175,7 +175,7 @@ Around 4.5 hours(debugging+testing)
 - countdown reset inconsistencies
 - loading state debugging
 
---------------------------------------------------------------
+----------------------------------------------------------------------------------------------
 
 # Day 4 Devlog update
 
@@ -217,7 +217,7 @@ Around 4.5 Hours
 - cleaner and smoother response
 - spme more festures gradually adding
 
---------------------------------
+----------------------------------------------------------------
 
 ## Night session (Day 4) :
 
@@ -225,7 +225,7 @@ Around 4.5 Hours
 Around 2 hours
 
 ### Completed:
--Redesigned overall UI layout
+- Redesigned overall UI layout
 - Added side-by-side botom sections
 - Improved neon color visual
 - Added glassy effects
@@ -243,4 +243,57 @@ Around 2 hours
 - dark mode light mode visual separation
 - responsive design in mobile
 
---------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+
+# Day 4 Devlog update
+
+### Date:
+19 May 2026
+
+### Time Spent:
+Around 4 Hours
+
+### Works Completed:
+- Refactored repeated css styling
+- Added reusable glass card system
+- improved reusable button styling
+- cleaned duplicated frontend styles
+- improved gameplay hover effects
+- adjusted layout spacing
+- game area atmosphere enhanced 
+- refined typos in css and html and js
+- shortened and organized css structure
+
+### Problems Faced:
+- Hover blinking issue on buttons
+- layout balancing inconsistencies
+- some duplicated css conflicts
+- ui spcaing looks stretched 
+- hovering transition bugs 
+
+### Next Goal:
+- Improved gameplay balancing
+- refine responsive design overall
+- better event feed visuals
+- smoothness adding
+- css shortening and layout adjustment
+
+----------------------------------------------------------------
+
+## Night session (Day 4) :
+
+### Time Spent:
+Around 30 mins
+
+### Completed:
+- Fixed frontend hover issues
+- Refined button interaction
+- Improved gameplay section alignment
+- cleaned small visual inconsistencies
+- tested gameplay responsiveness
+
+### Problems Faced:
+- Minor layout shifting
+- some spacing inconsistencies
+- responsive adjustment in mobile
+----------------------------------------------------------------------------------------------
