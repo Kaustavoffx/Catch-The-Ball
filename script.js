@@ -1,3 +1,7 @@
+//==============================
+//DOM ELEMENT REFERENCES
+//==============================
+
 const basket = document.getElementById("basket");
 const ball = document.getElementById("ball");
 const scoreText = document.getElementById("score");
@@ -77,10 +81,11 @@ const streakText=
     document.getElementById(
         "streak"
     );
-let streak = 0;
-
 const profileAvatar = document.getElementById("profileAvatar")
-let unlockedAchievements = 0;
+
+//==============================
+//ACHIEVEMENT SYSTEM
+//==============================
 
 function addAchievement(text){
     const achievement = 
@@ -101,6 +106,10 @@ function addAchievement(text){
     achievementCount.innerText = 
         unlockedAchievements;
 }
+
+//==============================
+//GAME VARIABLES
+//==============================
 
 let timer = 0;
 
@@ -125,6 +134,8 @@ let gameInterval;
 
 let gameRunning = false;
 
+let streak = 0;
+
 let highScore =
     localStorage.getItem("highScore") || 0;
 
@@ -147,6 +158,8 @@ if(savedPlayer){
 
     playerName.value = savedPlayer;
 }
+
+let unlockedAchievements = 0;
 
 const savedTheme = 
     localStorage.getItem("theme");
@@ -192,6 +205,10 @@ function moveBasket(event){
 
     basket.style.left = basketX + "px";
 }
+
+// ==============================
+// MAIN GAME LOOP
+// ==============================
 
 function updateBall(){
 
@@ -475,6 +492,10 @@ function resetBall(){
 
 }
 
+// ==============================
+// COUNTDOWN SYSTEM
+// ==============================
+
 function startCountdown(){
 
     pauseOverlay.style.display = "flex";
@@ -604,6 +625,10 @@ function startCountdown(){
         },1000);
 }
 
+// ==============================
+// GAME START SYSTEM
+// ==============================
+
 function startGame(){
 
     gamesPlayed++;
@@ -700,6 +725,10 @@ function startGame(){
         "startScreen"
     ).style.display = "none";
 }
+
+// ==============================
+// PAUSE AND RESUME SYSTEM 
+// ==============================
 
 pauseBtn.addEventListener(
     "click",
@@ -810,6 +839,10 @@ document.addEventListener(
     }
 );
 
+// ==============================
+// THEME MANAGEMENT
+// ==============================
+
 themeSelect.addEventListener(
     "change",
     function(){
@@ -919,6 +952,10 @@ const eventMessages =
     document.getElementById(
         "eventMessages"
     );
+
+//==============================
+//LIVE GAME SYSTEM
+//==============================
 
 function addEvent(message){
 
