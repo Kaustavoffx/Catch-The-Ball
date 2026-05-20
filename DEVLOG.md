@@ -296,4 +296,5 @@ Around 30 mins
 - Minor layout shifting
 - some spacing inconsistencies
 - responsive adjustment in mobile
+
 ----------------------------------------------------------------------------------------------
